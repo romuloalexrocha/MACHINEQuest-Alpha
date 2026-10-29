@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogoGerenciador : MonoBehaviour
+public class GerenciadorDialogo : MonoBehaviour
 {
     [Header("Referência dos Dados")]
     [SerializeField] private DialogoDados dialogoAtual;
@@ -17,8 +17,16 @@ public class DialogoGerenciador : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        indexListaDialogos = 0; // Inicializa o índice da lista de diálogos
-        IniciarDialogo(dialogoAtual); // Inicia o diálogo atual
+        indexListaDialogos = 0;
+        // Se houver um diálogo padrão configurado, inicia
+        if (dialogoAtual != null)
+        {
+            IniciarDialogo(dialogoAtual);
+        }
+        else
+        {
+            caixaDialogo.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -32,7 +40,7 @@ public class DialogoGerenciador : MonoBehaviour
         indexListaDialogos++;
 
         // Verifica se ainda há falas restantes no diálogo
-        if (indexListaDialogos >= dialogoAtual.linhasDialogo.Count)
+        if (dialogoAtual != null && indexListaDialogos >= dialogoAtual.linhasDialogo.Count)
         {
             // O diálogo acabou!
             FecharCaixaDialogo();
@@ -54,12 +62,25 @@ public class DialogoGerenciador : MonoBehaviour
 
     private void ExibirFalaAtual()
     {
+        if (dialogoAtual == null || dialogoAtual.linhasDialogo.Count == 0) return;
         // Obtém a fala atual com base no índice
         DialogoLinhas falaAtual = dialogoAtual.linhasDialogo[indexListaDialogos];
         // Atualiza os campos da UI com as informações da fala atual
         campoNome.text = falaAtual.nomePersonagem;
         campoTexto.text = falaAtual.falaPersonagem;
-        imagemAvatar.sprite = falaAtual.spritePersonagem;
+        // Trata a imagem do avatar (só ativa se houver um sprite configurado)
+        if (imagemAvatar != null)
+        {
+            if (falaAtual.spritePersonagem != null)
+            {
+                imagemAvatar.sprite = falaAtual.spritePersonagem;
+                imagemAvatar.gameObject.SetActive(true);
+            }
+            else
+            {
+                imagemAvatar.gameObject.SetActive(false);
+            }
+        }
     }
 
     private void FecharCaixaDialogo()
@@ -68,6 +89,6 @@ public class DialogoGerenciador : MonoBehaviour
         caixaDialogo.SetActive(false);
 
         // Reinicia o índice para o início do diálogo
-        //indexListaDialogos = 0;
+        indexListaDialogos = 0;
     }
 }
