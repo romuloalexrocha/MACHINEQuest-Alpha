@@ -18,12 +18,8 @@ public class GerenciadorDialogo : MonoBehaviour
     void Start()
     {
         indexListaDialogos = 0;
-        // Se houver um diálogo padrão configurado, inicia
-        if (dialogoAtual != null)
-        {
-            IniciarDialogo(dialogoAtual);
-        }
-        else
+        // Mantém a caixa fechada até ser solicitada por clique/evento
+        if (caixaDialogo != null)
         {
             caixaDialogo.SetActive(false);
         }
