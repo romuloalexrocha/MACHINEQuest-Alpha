@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
-  m_Name: Dialogo_Introducao
+  m_Name: Dialogo_CENA3_OleoEscorrendo_FINAL
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: Instrutor
-    falaPersonagem: "Bem-vindo ao treinamento! Hoje vamos aprender a manuten\xE7\xE3o
-      do redutor."
-    spritePersonagem: {fileID: 0}
-  - nomePersonagem: Novato
-    falaPersonagem: "Perfeito! Estou pronto para come\xE7ar a desmontagem."
+  - nomePersonagem: "S\xE9rgio"
+    falaPersonagem: "O \xF3leo come\xE7ou a escorrer, muito bem! Aguarde at\xE9 o
+      final."
     spritePersonagem: {fileID: 0}
