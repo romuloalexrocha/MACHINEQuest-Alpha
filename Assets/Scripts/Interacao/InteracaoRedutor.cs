@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class InteracaoRedutor : MonoBehaviour
 {
+    private bool jaInteragiu = false; // Flag para verificar se a interação já ocorreu
     private void Update()
     {
         // Verifica se o botão esquerdo do mouse foi pressionado nesta frame (usando o New Input System)
@@ -31,5 +32,15 @@ public class InteracaoRedutor : MonoBehaviour
             SceneManager.LoadSceneAsync("Scene_UI", LoadSceneMode.Additive);
             Debug.Log("Redutor clicado! Carregando a UI...");
         }
+
+        ExecutarIntroducao();
+    }
+
+    public void ExecutarIntroducao()
+    {
+        // Se já interagiu uma vez, ignora e deixa os outros objetos receberem o clique
+        if (jaInteragiu) return;
+
+        jaInteragiu = true;
     }
 }

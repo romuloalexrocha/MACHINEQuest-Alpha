@@ -1,4 +1,5 @@
 using NUnit.Framework.Internal.Execution;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -53,5 +54,10 @@ public class ControleInventario : MonoBehaviour
                 slotsIcones[i].enabled = false;
             }
         }
+    }
+
+    public bool VerificarItem(string nomeItem)
+    {
+        return itensColetados.Contains(nomeItem);
     }
 }
