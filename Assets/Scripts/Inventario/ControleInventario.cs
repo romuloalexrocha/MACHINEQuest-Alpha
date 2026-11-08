@@ -55,9 +55,4 @@ public class ControleInventario : MonoBehaviour
             }
         }
     }
-
-    public bool VerificarItem(string nomeItem)
-    {
-        return itensColetados.Contains(nomeItem);
-    }
 }

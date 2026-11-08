@@ -55,7 +55,7 @@ public class ParafusoCarcassa : MonoBehaviour
     private void TentarDesparafusar()
     {
         // Checa se o jogador tem a chave no inventário
-        if (inventario != null && inventario.VerificarItem("Chave Allen"))
+        if (inventario != null && inventario.TemItem("Chave Allen"))
         {
             temChave = true;
             colParafuso.enabled = false; // Desativa o collider do parafuso
