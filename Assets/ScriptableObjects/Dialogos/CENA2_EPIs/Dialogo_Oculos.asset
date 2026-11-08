@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
+  m_Name: Dialogo_Oculos
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  linhasDialogo:
+  - nomePersonagem: "S\xE9rgio"
+    falaPersonagem: "Os \xF3culos de prote\xE7\xE3o evitam que part\xEDculas, poeira
+      e respingos de produtos qu\xEDmicos atinjam seus olhos."
+    spritePersonagem: {fileID: 0}

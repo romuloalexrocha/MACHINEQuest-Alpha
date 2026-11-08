@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
+  m_Name: Dialogo_EPIs
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  linhasDialogo:
+  - nomePersonagem: "S\xE9rgio"
+    falaPersonagem: "Esse \xE9 o nosso redutor, mas antes, voc\xEA precisa colocar
+      os equipamentos de prote\xE7\xE3o necess\xE1rios para manuse\xE1-lo."
+    spritePersonagem: {fileID: 0}
+  - nomePersonagem: "S\xE9rgio"
+    falaPersonagem: "Ao clicar na seta para a ESQUERDA << voc\xEA ir\xE1 para a mesa
+      de itens de seguran\xE7a. Selecione os itens corretos para o procedimento.
+      Ao selecionar, eles ir\xE3o para o seu invent\xE1rio de EPIs localizado na
+      parte inferior da tela."
+    spritePersonagem: {fileID: 0}

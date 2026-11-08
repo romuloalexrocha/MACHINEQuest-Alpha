@@ -72,7 +72,7 @@ public class ItemColetavel : MonoBehaviour
         Vector2 posicaoMouse = Mouse.current.position.ReadValue();
 
         // Converte a posição da tela para o mundo 2D do jogo
-        Vector3 posicaoMundo3D = cameraPrincipal.ScreenToWorldPoint(new Vector3(posicaoMouse.x, posicaoMouse.y, cameraPrincipal.nearClipPlane));
+        Vector3 posicaoMundo3D = cameraPrincipal.ScreenToWorldPoint(new Vector3(posicaoMouse.x, posicaoMouse.y, 10f));
         Vector2 posicaoMundo = new Vector2(posicaoMundo3D.x, posicaoMundo3D.y);
 
         // Lança um Raycast 2D no ponto onde o mouse clicou
