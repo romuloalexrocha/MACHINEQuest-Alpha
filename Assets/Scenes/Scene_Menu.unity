@@ -1638,6 +1638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
   cenaJogo: Scene_Gameplay
+  cenaUI: Scene_UI
   PainelMenu: {fileID: 1923407454}
   PainelOpcoes: {fileID: 1696520929}
   PainelCreditos: {fileID: 868191187}

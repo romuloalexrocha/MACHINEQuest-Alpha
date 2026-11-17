@@ -5,14 +5,18 @@ public class MenuManager : MonoBehaviour
 {
 
     [Header("Nome Cenas")]
-    [SerializeField]private string cenaJogo;
+    [SerializeField] private string cenaJogo;
+    [SerializeField] private string cenaUI;
     [SerializeField] private GameObject PainelMenu;
     [SerializeField] private GameObject PainelOpcoes;
     [SerializeField] private GameObject PainelCreditos;
 
     public void Jogar()
     {
-        SceneManager.LoadScene(cenaJogo);
+        // Carrega a cena de gameplay
+        SceneManager.LoadScene(cenaJogo, LoadSceneMode.Single);
+        // Carrega a cena da interface do usuário de forma aditiva
+        SceneManager.LoadScene(cenaUI, LoadSceneMode.Additive);
     }
 
     public void AbrirOpcoes()
