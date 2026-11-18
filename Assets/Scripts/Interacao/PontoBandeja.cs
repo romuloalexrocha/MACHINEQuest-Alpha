@@ -1,12 +1,12 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PontoBandeja : MonoBehaviour
+public class PontoBandeja : MonoBehaviour, IClicavel
 {
     [SerializeField] private ControleInventario inventario;
     [SerializeField] private SpriteRenderer srBandeja;
     [SerializeField] private SpriteRenderer srPonto;
     [SerializeField] private GerenciadorDialogo gd;
+    [SerializeField] private GerenciadorAudio ga;
 
     [Header("Diálogos de Referência")]
     [SerializeField] private DialogoDados dialogoSemBandeja, dialogoComBandeja;
@@ -19,6 +19,7 @@ public class PontoBandeja : MonoBehaviour
     {
         inventario = FindFirstObjectByType<ControleInventario>(FindObjectsInactive.Include);
         gd = FindFirstObjectByType<GerenciadorDialogo>(FindObjectsInactive.Include);
+        ga = FindFirstObjectByType<GerenciadorAudio>(FindObjectsInactive.Include);
 
         // Pega o SpriteRenderer do próprio objeto se não foi arrastado
         if (srPonto == null) srPonto = GetComponent<SpriteRenderer>();
@@ -33,31 +34,9 @@ public class PontoBandeja : MonoBehaviour
         cameraPrincipal = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AoClicar()
     {
-        if (bandejaPosicionada) return; // Se a bandeja já estiver posicionada, não faz nada
-
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            VerificarClique();
-        }
-    }
-
-    private void VerificarClique()
-    {
-        if (cameraPrincipal == null) cameraPrincipal = Camera.main;
-
-        Vector2 posicaoMouse = Mouse.current.position.ReadValue();
-        Vector3 posicaoMundo3D = cameraPrincipal.ScreenToWorldPoint(new Vector3(posicaoMouse.x, posicaoMouse.y, cameraPrincipal.nearClipPlane));
-        Vector2 posicaoMundo = new Vector2(posicaoMundo3D.x, posicaoMundo3D.y);
-
-        RaycastHit2D hit = Physics2D.Raycast(posicaoMundo, Vector2.zero);
-
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
-        {
-            TentarPosicionarBandeja();
-        }
+        if (!bandejaPosicionada) TentarPosicionarBandeja();
     }
 
     private void TentarPosicionarBandeja()
@@ -75,6 +54,7 @@ public class PontoBandeja : MonoBehaviour
             // Chama o diálogo de sucesso do Sérgio se tiver configurado
             if (gd != null && dialogoComBandeja != null)
             {
+                ga.TocarSomAcerto();
                 gd.IniciarDialogo(dialogoComBandeja);
             }
         }
