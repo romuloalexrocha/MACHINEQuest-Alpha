@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class DialogoGatilho2D : MonoBehaviour
+public class DialogoGatilho2D : MonoBehaviour, IClicavel
 {
     [SerializeField] private DialogoDados dadosDialogo;
     [SerializeField] private GerenciadorDialogo dialogoManager;
@@ -19,29 +18,9 @@ public class DialogoGatilho2D : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AoClicar()
     {
-        if(Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            VerificarClique();
-        }
-    }
-
-    private void VerificarClique()
-    {
-        if (cameraPrincipal == null) cameraPrincipal = Camera.main;
-
-        Vector2 posicaoMouse = Mouse.current.position.ReadValue();
-        Vector3 posicaoMundo3D = cameraPrincipal.ScreenToWorldPoint(new Vector3(posicaoMouse.x, posicaoMouse.y, cameraPrincipal.nearClipPlane));
-        Vector2 posicaoMundo = new Vector2(posicaoMundo3D.x, posicaoMundo3D.y);
-
-        RaycastHit2D hit = Physics2D.Raycast(posicaoMundo, Vector2.zero);
-
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
-        {
-            AcionarDialogo();
-        }
+        AcionarDialogo();
     }
 
     private void AcionarDialogo()

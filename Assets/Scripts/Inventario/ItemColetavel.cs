@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Importante para o New Input System
 
-public class ItemColetavel : MonoBehaviour
+public class ItemColetavel : MonoBehaviour, IClicavel
 {
     [Header("Configurações do Item")]
     public string nomeItem;
@@ -35,13 +34,9 @@ public class ItemColetavel : MonoBehaviour
         BuscarReferencias();
     }
 
-    private void Update()
+    public void AoClicar()
     {
-        // Verifica se o botão esquerdo do mouse foi pressionado neste frame
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            VerificarClique();
-        }
+        Coletar();
     }
 
     private void BuscarReferencias()
@@ -63,25 +58,6 @@ public class ItemColetavel : MonoBehaviour
             {
                 Debug.LogWarning("GerenciadorEPI não encontrado na cena.");
             }
-        }
-    }
-
-    private void VerificarClique()
-    {
-        // Pega a posição atual do mouse na tela
-        Vector2 posicaoMouse = Mouse.current.position.ReadValue();
-
-        // Converte a posição da tela para o mundo 2D do jogo
-        Vector3 posicaoMundo3D = cameraPrincipal.ScreenToWorldPoint(new Vector3(posicaoMouse.x, posicaoMouse.y, 10f));
-        Vector2 posicaoMundo = new Vector2(posicaoMundo3D.x, posicaoMundo3D.y);
-
-        // Lança um Raycast 2D no ponto onde o mouse clicou
-        RaycastHit2D hit = Physics2D.Raycast(posicaoMundo, Vector2.zero);
-
-        // Se o Raycast acertar o Collider 2D DESTE objeto específico
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
-        {
-            Coletar();
         }
     }
 

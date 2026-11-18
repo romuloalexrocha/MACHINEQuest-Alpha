@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PlugueDreno : MonoBehaviour
+public class PlugueDreno : MonoBehaviour, IClicavel
 {
     [Header("Referências da Cena")]
     [SerializeField] private PontoBandeja pontoBandeja;       // Para checar se a bandeja está no lugar
@@ -31,32 +30,9 @@ public class PlugueDreno : MonoBehaviour
         cameraPrincipal = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AoClicar()
     {
-        // Se o dreno já foi aberto, ignora novos cliques (Early Return)
-        if (drenoAberto) return;
-
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            VerificarClique();
-        }
-    }
-
-    private void VerificarClique()
-    {
-        if (cameraPrincipal == null) cameraPrincipal = Camera.main;
-
-        Vector2 posicaoMouse = Mouse.current.position.ReadValue();
-        Vector3 posicaoMundo3D = cameraPrincipal.ScreenToWorldPoint(new Vector3(posicaoMouse.x, posicaoMouse.y, cameraPrincipal.nearClipPlane));
-        Vector2 posicaoMundo = new Vector2(posicaoMundo3D.x, posicaoMundo3D.y);
-
-        RaycastHit2D hit = Physics2D.Raycast(posicaoMundo, Vector2.zero);
-
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
-        {
-            TentarAbrirDreno();
-        }
+        if(!drenoAberto) TentarAbrirDreno();
     }
 
     private void TentarAbrirDreno()
