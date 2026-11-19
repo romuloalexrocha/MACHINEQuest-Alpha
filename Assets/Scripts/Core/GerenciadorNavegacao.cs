@@ -8,6 +8,11 @@ public class GerenciadorNavegacao : MonoBehaviour
     public Transform visaoMesaEquipamentos;
     public Transform visaoQuadroFerramentas;
 
+    [Header("Trava de EPIs")]
+    [SerializeField] private GerenciadorEPI gerenciadorEPI;
+    [SerializeField] private GerenciadorDialogo gerenciadorDialogo;
+    [SerializeField] private DialogoDados dialogoFaltamEPIs;
+
     public Transform cameraPrincipal;
 
     void Start()
@@ -20,6 +25,16 @@ public class GerenciadorNavegacao : MonoBehaviour
 
     public void IrParaBancadaPrincipal()
     {
+        // Bloqueia o retorno caso ainda não tenha coletado os 5 EPIs
+        if (gerenciadorEPI != null && !gerenciadorEPI.TodosEPIsColetados())
+        {
+            if (gerenciadorDialogo != null && dialogoFaltamEPIs != null)
+            {
+                gerenciadorDialogo.IniciarDialogo(dialogoFaltamEPIs);
+            }
+            return; // Interrompe aqui e não move a câmera!
+        }
+
         MoverCamera(visaoBancadaPrincipal);
     }
 

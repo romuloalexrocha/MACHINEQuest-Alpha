@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 94204162}
   - component: {fileID: 94204160}
   - component: {fileID: 94204164}
+  - component: {fileID: 94204165}
   m_Layer: 0
   m_Name: EPI_Protetor
   m_TagString: Untagged
@@ -275,6 +276,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.1970787, y: 3.1970787}
   m_EdgeRadius: 0
+--- !u!114 &94204165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94204159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e979c8aab718a404b90f8240bd34bc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoGatilho2D
+  dadosDialogo: {fileID: 11400000, guid: 13298334d44d4df40aee57da4efdae29, type: 2}
+  dialogoManager: {fileID: 0}
 --- !u!1 &98368573
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +501,7 @@ GameObject:
   - component: {fileID: 210322158}
   - component: {fileID: 210322156}
   - component: {fileID: 210322160}
+  - component: {fileID: 210322161}
   m_Layer: 0
   m_Name: EPI_Luvas
   m_TagString: Untagged
@@ -630,6 +646,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5917978, y: 3.3333333}
   m_EdgeRadius: 0
+--- !u!114 &210322161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210322155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e979c8aab718a404b90f8240bd34bc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoGatilho2D
+  dadosDialogo: {fileID: 11400000, guid: 54c65814cdebbfe4d8f66d6492b85afa, type: 2}
+  dialogoManager: {fileID: 0}
 --- !u!1 &315852008
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,6 +828,7 @@ GameObject:
   - component: {fileID: 385410704}
   - component: {fileID: 385410702}
   - component: {fileID: 385410706}
+  - component: {fileID: 385410707}
   m_Layer: 0
   m_Name: EPI_Botas
   m_TagString: Untagged
@@ -942,6 +973,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.2665272, y: 2.4003153}
   m_EdgeRadius: 0
+--- !u!114 &385410707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385410701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e979c8aab718a404b90f8240bd34bc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoGatilho2D
+  dadosDialogo: {fileID: 11400000, guid: 4ed4627f75434ba41a0ccc1be33ef95d, type: 2}
+  dialogoManager: {fileID: 0}
 --- !u!1 &415959419
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +999,7 @@ GameObject:
   - component: {fileID: 415959422}
   - component: {fileID: 415959420}
   - component: {fileID: 415959424}
+  - component: {fileID: 415959425}
   m_Layer: 0
   m_Name: EPI_Oculos
   m_TagString: Untagged
@@ -1098,6 +1144,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.4229374, y: 0.95}
   m_EdgeRadius: 0
+--- !u!114 &415959425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415959419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e979c8aab718a404b90f8240bd34bc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoGatilho2D
+  dadosDialogo: {fileID: 11400000, guid: 99c1883a285cc8b4981939a8805aa76f, type: 2}
+  dialogoManager: {fileID: 0}
 --- !u!1 &647590651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1378,7 @@ GameObject:
   - component: {fileID: 704997926}
   - component: {fileID: 704997924}
   - component: {fileID: 704997928}
+  - component: {fileID: 704997929}
   m_Layer: 0
   m_Name: EPI_Avental
   m_TagString: Untagged
@@ -1462,6 +1523,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.7048852, y: 6.6500363}
   m_EdgeRadius: 0
+--- !u!114 &704997929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704997923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e979c8aab718a404b90f8240bd34bc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoGatilho2D
+  dadosDialogo: {fileID: 11400000, guid: a254f33b62b688c4cafe2209463e5da0, type: 2}
+  dialogoManager: {fileID: 0}
 --- !u!1 &776837899
 GameObject:
   m_ObjectHideFlags: 0

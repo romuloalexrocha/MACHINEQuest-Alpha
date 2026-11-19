@@ -18,7 +18,7 @@ public class ControleInventario : MonoBehaviour
 
     public bool AdicionarItem(string nomeItem, Sprite iconeItem, Color corItem = default)
     {
-        if (itensColetados.Count >= 10) return false; // Aumentado limite enquanto não fizer inventário separado de EPI
+        if (itensColetados.Count >= 5) return false; // Aumentado limite enquanto não fizer inventário separado de EPI
 
         // Se a cor não for informada, usa branco como cor padrão pura
         if (corItem == default) corItem = Color.white;
