@@ -14,6 +14,8 @@ public class GerenciadorDialogo : MonoBehaviour
     [SerializeField] private Image imagemAvatar;
     [SerializeField] private GameObject caixaDialogo;
 
+    private DialogoDados dialogoEmFila; // Armazena o próximo diálogo a ser iniciado após o atual
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,6 +58,34 @@ public class GerenciadorDialogo : MonoBehaviour
         ExibirFalaAtual();
     }
 
+    public void IniciarDialogoEmSequencia(DialogoDados primeiroDialogo, DialogoDados proximoDialogo)
+    {
+        dialogoEmFila = proximoDialogo;
+        IniciarDialogo(primeiroDialogo);
+    }
+
+    public void EnfileirarDialogo(DialogoDados proximoDialogo)
+    {
+        // Apenas coloca na fila!
+        dialogoEmFila = proximoDialogo;
+
+        // Se ao final deste frame a caixa continuar fechada (caso um EPI não tenha fala), abre direto
+        if (caixaDialogo != null && !caixaDialogo.activeSelf)
+        {
+            Invoke(nameof(DispararFilaSeCaixaFechada), 0.05f);
+        }
+    }
+
+    private void DispararFilaSeCaixaFechada()
+    {
+        if (dialogoEmFila != null && caixaDialogo != null && !caixaDialogo.activeSelf)
+        {
+            DialogoDados proximo = dialogoEmFila;
+            dialogoEmFila = null;
+            IniciarDialogo(proximo);
+        }
+    }
+
     private void ExibirFalaAtual()
     {
         if (dialogoAtual == null || dialogoAtual.linhasDialogo.Count == 0) return;
@@ -81,6 +111,15 @@ public class GerenciadorDialogo : MonoBehaviour
 
     private void FecharCaixaDialogo()
     {
+        // Se houver um diálogo na fila, inicia ele direto sem fechar a caixa
+        if (dialogoEmFila != null)
+        {
+            DialogoDados proximo = dialogoEmFila;
+            dialogoEmFila = null; // Limpa a fila para encerrar normalmente depois
+            IniciarDialogo(proximo);
+            return;
+        }
+
         // Desativa a caixa de diálogo
         caixaDialogo.SetActive(false);
 

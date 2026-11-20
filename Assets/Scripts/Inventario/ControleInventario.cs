@@ -11,6 +11,15 @@ public class ControleInventario : MonoBehaviour
     private List<Sprite> iconesColetados = new List<Sprite>();
     private List<Color> coresColetadas = new List<Color>();
 
+    public void Start()
+    {
+        // Inicializa a gaveta de slots como desativada
+        if (gavetaSlots != null)
+        {
+            gavetaSlots.SetActive(false);
+        }
+    }
+
     public void AlternarInventario()
     {
         gavetaSlots.SetActive(!gavetaSlots.activeSelf);
@@ -18,7 +27,7 @@ public class ControleInventario : MonoBehaviour
 
     public bool AdicionarItem(string nomeItem, Sprite iconeItem, Color corItem = default)
     {
-        if (itensColetados.Count >= 10) return false; // Aumentado limite enquanto não fizer inventário separado de EPI
+        if (itensColetados.Count >= 5) return false; // Aumentado limite enquanto não fizer inventário separado de EPI
 
         // Se a cor não for informada, usa branco como cor padrão pura
         if (corItem == default) corItem = Color.white;
@@ -49,6 +58,42 @@ public class ControleInventario : MonoBehaviour
             }
             else
             {
+                slotsIcones[i].enabled = false;
+            }
+        }
+    }
+
+    public void RemoverItem(string nomeItem)
+    {
+        for (int i = 0; i < itensColetados.Count; i++)
+        {
+            if (itensColetados[i] == nomeItem)
+            {
+                // Remove da mesma posição nas 3 listas paralelas
+                itensColetados.RemoveAt(i);
+                iconesColetados.RemoveAt(i);
+                coresColetadas.RemoveAt(i);
+
+                AtualizarSlotsVisuais();
+                Debug.Log($"Item removido do inventário: {nomeItem}");
+                return;
+            }
+        }
+    }
+
+    private void AtualizarSlotsVisuais()
+    {
+        for (int i = 0; i < slotsIcones.Length; i++)
+        {
+            if (i < itensColetados.Count)
+            {
+                slotsIcones[i].sprite = iconesColetados[i];
+                slotsIcones[i].color = coresColetadas[i];
+                slotsIcones[i].enabled = true;
+            }
+            else
+            {
+                slotsIcones[i].sprite = null;
                 slotsIcones[i].enabled = false;
             }
         }

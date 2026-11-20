@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,7 @@ public class GerenciadorAudio : MonoBehaviour
     [Header("Clipes de Áudio")]
     [SerializeField] private AudioClip somClique;
     [SerializeField] private AudioClip somAcerto;
+    [SerializeField] private AudioClip somErro;
 
     private void Update()
     {
@@ -49,6 +51,14 @@ public class GerenciadorAudio : MonoBehaviour
         if (fonteSFX != null && somAcerto != null)
         {
             fonteSFX.PlayOneShot(somAcerto);
+        }
+    }
+
+    internal void TocarSomErro()
+    {
+        if (fonteSFX != null && somErro != null)
+        {
+            fonteSFX.PlayOneShot(somErro);
         }
     }
 }

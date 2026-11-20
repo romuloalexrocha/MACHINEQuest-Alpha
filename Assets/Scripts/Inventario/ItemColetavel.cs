@@ -69,17 +69,28 @@ public class ItemColetavel : MonoBehaviour, IClicavel
             BuscarReferencias();
         }
 
+        // Caminho 1: Se for EPI, vai direto para a barra horizontal inferior
+        if (ehEPI)
+        {
+            if (gerenciadorEPI != null)
+            {
+                gerenciadorEPI.ColetarEPI(nomeItem, iconeItem);
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.LogError("GerenciadorEPI não foi encontrado na cena!");
+            }
+            return;
+        }
+
+        // Caminho 2: Se for ferramenta/insumo, vai para a gaveta vertical
         if (controleInventario != null)
         {
             bool guardadoComSucesso = controleInventario.AdicionarItem(nomeItem, iconeItem, corOriginal);
 
             if (guardadoComSucesso)
             {
-                if (ehEPI && gerenciadorEPI != null)
-                {
-                    gerenciadorEPI.ColetarEPI(nomeItem);
-                }
-
                 gameObject.SetActive(false);
             }
         }
