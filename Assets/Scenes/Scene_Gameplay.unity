@@ -444,6 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteracaoRedutor
   gd: {fileID: 0}
   dialogoIntroducao: {fileID: 11400000, guid: a23af99202dd8f347b71a0c9f109a16c, type: 2}
+  dialogoEPI: {fileID: 11400000, guid: 6958b716794a8a54b9da4f00f1c78e24, type: 2}
 --- !u!1 &159564003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,8 +1219,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 663002787}
-  - component: {fileID: 663002786}
   - component: {fileID: 663002785}
+  - component: {fileID: 663002786}
   - component: {fileID: 663002784}
   m_Layer: 0
   m_Name: PlugueDreno
@@ -1245,6 +1246,7 @@ MonoBehaviour:
   srPlugue: {fileID: 0}
   dialogoSemBandeja: {fileID: 11400000, guid: 77e73941247900e49bd9ca91c4104938, type: 2}
   dialogoDrenouOleo: {fileID: 11400000, guid: 019ee62cad7683746878145613859cad, type: 2}
+  dialogoCarcassa: {fileID: 11400000, guid: a04bc066acadea444a0a3c1a015e2046, type: 2}
   drenoAberto: 0
 --- !u!61 &663002785
 BoxCollider2D:
@@ -1587,8 +1589,11 @@ MonoBehaviour:
   srParafuso: {fileID: 776837903}
   colParafuso: {fileID: 776837902}
   gd: {fileID: 0}
+  ga: {fileID: 0}
   controle: {fileID: 647590653}
+  plugueDreno: {fileID: 663002784}
   dialogoSemChave: {fileID: 11400000, guid: 1a35b315b1ff7564cadb0015cdb95362, type: 2}
+  dialogoSemDrenar: {fileID: 11400000, guid: 2f6cf7a3a4b469a4dbe8bd9bce42c9c4, type: 2}
   temChave: 0
 --- !u!61 &776837902
 BoxCollider2D:
@@ -1745,8 +1750,11 @@ MonoBehaviour:
   srParafuso: {fileID: 983858203}
   colParafuso: {fileID: 983858202}
   gd: {fileID: 0}
+  ga: {fileID: 0}
   controle: {fileID: 647590653}
+  plugueDreno: {fileID: 663002784}
   dialogoSemChave: {fileID: 11400000, guid: 1a35b315b1ff7564cadb0015cdb95362, type: 2}
+  dialogoSemDrenar: {fileID: 11400000, guid: 2f6cf7a3a4b469a4dbe8bd9bce42c9c4, type: 2}
   temChave: 0
 --- !u!61 &983858202
 BoxCollider2D:
@@ -1889,6 +1897,7 @@ MonoBehaviour:
   srPonto: {fileID: 0}
   gd: {fileID: 0}
   ga: {fileID: 0}
+  nomeItemBandeja: Bandeja
   dialogoSemBandeja: {fileID: 11400000, guid: 77e73941247900e49bd9ca91c4104938, type: 2}
   dialogoComBandeja: {fileID: 11400000, guid: 259c057b5cf900f41b4b41b2a8517e59, type: 2}
   bandejaPosicionada: 0
@@ -2006,7 +2015,7 @@ Transform:
   m_GameObject: {fileID: 1274648952}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: -4, z: 0}
+  m_LocalPosition: {x: -0.2, y: -4.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2062,8 +2071,11 @@ MonoBehaviour:
   srParafuso: {fileID: 1473350030}
   colParafuso: {fileID: 1473350029}
   gd: {fileID: 0}
+  ga: {fileID: 0}
   controle: {fileID: 647590653}
+  plugueDreno: {fileID: 663002784}
   dialogoSemChave: {fileID: 11400000, guid: 1a35b315b1ff7564cadb0015cdb95362, type: 2}
+  dialogoSemDrenar: {fileID: 11400000, guid: 2f6cf7a3a4b469a4dbe8bd9bce42c9c4, type: 2}
   temChave: 0
 --- !u!61 &1473350029
 BoxCollider2D:
@@ -2220,8 +2232,11 @@ MonoBehaviour:
   srParafuso: {fileID: 1563719005}
   colParafuso: {fileID: 1563719004}
   gd: {fileID: 0}
+  ga: {fileID: 0}
   controle: {fileID: 647590653}
+  plugueDreno: {fileID: 663002784}
   dialogoSemChave: {fileID: 11400000, guid: 1a35b315b1ff7564cadb0015cdb95362, type: 2}
+  dialogoSemDrenar: {fileID: 11400000, guid: 2f6cf7a3a4b469a4dbe8bd9bce42c9c4, type: 2}
   temChave: 0
 --- !u!61 &1563719004
 BoxCollider2D:

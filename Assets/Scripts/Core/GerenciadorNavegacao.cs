@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GerenciadorNavegacao : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class GerenciadorNavegacao : MonoBehaviour
     [SerializeField] private GerenciadorDialogo gerenciadorDialogo;
     [SerializeField] private DialogoDados dialogoFaltamEPIs;
 
+    [Header("Botões Travados Antes dos EPIs")]
+    [SerializeField] private Button botaoCima;
+    [SerializeField] private Button botaoDireita;
+    [SerializeField] private Button botaoVoltar;
+
     public Transform cameraPrincipal;
 
     void Start()
@@ -21,6 +27,8 @@ public class GerenciadorNavegacao : MonoBehaviour
         {
             cameraPrincipal = Camera.main.transform;
         }
+
+        TravarNavegacaoInicial();
     }
 
     public void IrParaBancadaPrincipal()
@@ -69,5 +77,19 @@ public class GerenciadorNavegacao : MonoBehaviour
                 cameraPrincipal.position = new Vector3(destino.position.x, destino.position.y, -10f);
             }
         }
+    }
+
+    public void TravarNavegacaoInicial()
+    {
+        if (botaoCima != null) botaoCima.interactable = false;
+        if (botaoDireita != null) botaoDireita.interactable = false;
+        if (botaoVoltar != null) botaoVoltar.interactable = false;
+    }
+
+    public void LiberarNavegacaoGeral()
+    {
+        if (botaoCima != null) botaoCima.interactable = true;
+        if (botaoDireita != null) botaoDireita.interactable = true;
+        if (botaoVoltar != null) botaoVoltar.interactable = true;
     }
 }

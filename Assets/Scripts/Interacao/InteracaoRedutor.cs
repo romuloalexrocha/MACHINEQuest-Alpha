@@ -6,6 +6,7 @@ public class InteracaoRedutor : MonoBehaviour, IClicavel
     [Header("Referências de Diálogo")]
     [SerializeField] private GerenciadorDialogo gd;
     [SerializeField] private DialogoDados dialogoIntroducao;
+    [SerializeField] private DialogoDados dialogoEPI;
 
     private Collider2D colisor2D;
     private bool jaInteragiu = false; // Flag para verificar se a interação já ocorreu
@@ -50,9 +51,9 @@ public class InteracaoRedutor : MonoBehaviour, IClicavel
         }
 
         // Inicia o diálogo de introdução
-        if (gd != null && dialogoIntroducao != null)
+        if (gd != null && dialogoIntroducao != null && dialogoEPI != null)
         {
-            gd.IniciarDialogo(dialogoIntroducao);
+            gd.IniciarDialogoEmSequencia(dialogoIntroducao, dialogoEPI);
         }
 
         // Desativa o collider do próprio Redutor para liberar o clique dos outros objetos

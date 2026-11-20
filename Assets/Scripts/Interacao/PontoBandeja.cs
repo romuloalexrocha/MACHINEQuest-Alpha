@@ -7,6 +7,7 @@ public class PontoBandeja : MonoBehaviour, IClicavel
     [SerializeField] private SpriteRenderer srPonto;
     [SerializeField] private GerenciadorDialogo gd;
     [SerializeField] private GerenciadorAudio ga;
+    [SerializeField] private string nomeItemBandeja = "Bandeja"; // Mesmo nome usado no ItemColetavel!
 
     [Header("Diálogos de Referência")]
     [SerializeField] private DialogoDados dialogoSemBandeja, dialogoComBandeja;
@@ -51,11 +52,25 @@ public class PontoBandeja : MonoBehaviour, IClicavel
                 srPonto.enabled = true; // Exibe a imagem sob o dreno!
             }
 
+            if (ga != null) ga.TocarSomAcerto();
+
             // Chama o diálogo de sucesso do Sérgio se tiver configurado
             if (gd != null && dialogoComBandeja != null)
             {
-                ga.TocarSomAcerto();
                 gd.IniciarDialogo(dialogoComBandeja);
+            }
+
+            // Remove a bandeja da gaveta vertical da UI
+            if (inventario != null)
+            {
+                inventario.RemoverItem(nomeItemBandeja);
+            }
+
+            // Desativa o colisor do PontoBandeja para evitar cliques repetidos
+            Collider2D colisor = GetComponent<Collider2D>();
+            if (colisor != null)
+            {
+                colisor.enabled = false;
             }
         }
         else
