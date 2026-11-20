@@ -7,6 +7,7 @@ public class ControleCarcassa : MonoBehaviour
 
     [Header("Referências da Cena")]
     [SerializeField] private GerenciadorDialogo gd; // Referência ao gerenciador de diálogo para iniciar diálogos quando todos os parafusos forem removidos
+    [SerializeField] private GerenciadorAudio ga; // Referência ao gerenciador de áudio para tocar sons quando todos os parafusos forem removidos
     //[SerializeField] private SpriteRenderer srCarcassaFechada;
     //[SerializeField] private SpriteRenderer srCarcassaAberta;
 
@@ -18,6 +19,7 @@ public class ControleCarcassa : MonoBehaviour
     void Start()
     {
         if(gd == null) gd = FindFirstObjectByType<GerenciadorDialogo>(FindObjectsInactive.Include);
+        if (ga == null) ga = FindFirstObjectByType<GerenciadorAudio>(FindObjectsInactive.Include);
         //srCarcassaFechada.enabled = true; // Mostra a carcassa fechada inicialmente
         //srCarcassaAberta.enabled = false; // Esconde a carcassa aberta inicialmente
     }
@@ -29,12 +31,15 @@ public class ControleCarcassa : MonoBehaviour
         {
             //if(srCarcassaFechada != null) srCarcassaFechada.enabled = false; // Esconde a carcassa fechada
             //if(srCarcassaAberta != null) srCarcassaAberta.enabled = true; // Mostra a carcassa aberta
-            if(gd != null && dialogoCarcassaAberta != null)
+            if(gd != null && ga != null && dialogoCarcassaAberta != null)
             {
+                ga.TocarSomAcerto(); // Toca o som de sucesso
                 gd.IniciarDialogo(dialogoCarcassaAberta); // Inicia o diálogo de sucesso
             }
             // Aqui você pode adicionar a lógica que deve ocorrer quando o parafuso é removido.
             // Por exemplo, você pode abrir a carcassa ou ativar algum outro objeto.
+            ControlePrancheta cp = FindFirstObjectByType<ControlePrancheta>(FindObjectsInactive.Include);
+            if (cp != null) cp.LiberarPrancheta();
             Debug.Log("Todos os parafusos removidos! A carcaça pode ser aberta agora.");
         }
     }

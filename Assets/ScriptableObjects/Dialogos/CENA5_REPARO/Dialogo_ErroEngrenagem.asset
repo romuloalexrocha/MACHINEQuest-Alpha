@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
   - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "Essa engrenagem n\xE3o tem o mesmo di\xE2metro e n\xFAmero de
-      dentes da original. Observe bem a pe\xE7a danificada."
+    falaPersonagem: "Essa engrenagem est\xE1 \xEDntegra, sem sinais de desgaste cr\xEDtico
+      ou fratura. Continue procurando pela pe\xE7a danificada..."
     spritePersonagem: {fileID: 0}
