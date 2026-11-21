@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ControleCarcassa : MonoBehaviour
+public class ControleCarcassa : MonoBehaviour, IClicavel
 {
     [Header("Configurações")]
     [SerializeField] private int totalParafusos = 4; // Total de parafusos que precisam ser removidos
@@ -14,24 +14,55 @@ public class ControleCarcassa : MonoBehaviour
     [Header("Diálogos")]
     [SerializeField] private DialogoDados dialogoCarcassaAberta; // Diálogo de sucesso quando todos os parafusos são removidos
 
+    [Header("Fechamento")]
+    [SerializeField] private DialogoDados dialogoCarcassaFechada; // Diálogo de sucesso quando a carcassa é fechada
+    private Collider2D colisorCarcassa; // Colisor da carcassa para permitir que o jogador clique nela para fechá-la
+    public bool carcassaAberta = false; // Estado da carcassa, se está aberta ou fechada
+    private bool prontoParaFechar = false; // Estado que indica se a carcassa pode ser fechada
+
     private int parafusosRemovidos = 0; // Contador de parafusos removidos
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(gd == null) gd = FindFirstObjectByType<GerenciadorDialogo>(FindObjectsInactive.Include);
-        if (ga == null) ga = FindFirstObjectByType<GerenciadorAudio>(FindObjectsInactive.Include);
+        BuscarReferencias();
+        colisorCarcassa = GetComponent<Collider2D>();
+        if (colisorCarcassa != null) colisorCarcassa.enabled = false; // Desativa o colisor inicialmente)
         //srCarcassaFechada.enabled = true; // Mostra a carcassa fechada inicialmente
         //srCarcassaAberta.enabled = false; // Esconde a carcassa aberta inicialmente
+    }
+
+    public void AoClicar()
+    {
+        if (!prontoParaFechar) return;
+
+        // Lógica para fechar a carcassa
+        carcassaAberta = false;
+        prontoParaFechar = false;
+        if(colisorCarcassa != null) colisorCarcassa.enabled = false; // Desativa o colisor para evitar múltiplos cliques)
+
+        ga.TocarSomAcerto(); // Toca o som de sucesso
+        gd.IniciarDialogo(dialogoCarcassaFechada); // Inicia o diálogo de sucesso
+
+    }
+
+    private void BuscarReferencias()
+    {
+        if (gd == null) gd = FindFirstObjectByType<GerenciadorDialogo>(FindObjectsInactive.Include);
+        if (ga == null) ga = FindFirstObjectByType<GerenciadorAudio>(FindObjectsInactive.Include);
+        //if (srCarcassaFechada == null) srCarcassaFechada = GetComponent<SpriteRenderer>();
+        //if (srCarcassaAberta == null) srCarcassaAberta = GetComponent<SpriteRenderer>();
     }
 
     public void ParafusoRemovido()
     {
         parafusosRemovidos++;
-        if(parafusosRemovidos >= totalParafusos)
+        carcassaAberta = parafusosRemovidos >= totalParafusos;
+        if (parafusosRemovidos >= totalParafusos)
         {
             //if(srCarcassaFechada != null) srCarcassaFechada.enabled = false; // Esconde a carcassa fechada
             //if(srCarcassaAberta != null) srCarcassaAberta.enabled = true; // Mostra a carcassa aberta
-            if(gd != null && ga != null && dialogoCarcassaAberta != null)
+            if (gd != null && ga != null && dialogoCarcassaAberta != null)
             {
                 ga.TocarSomAcerto(); // Toca o som de sucesso
                 gd.IniciarDialogo(dialogoCarcassaAberta); // Inicia o diálogo de sucesso
@@ -42,5 +73,11 @@ public class ControleCarcassa : MonoBehaviour
             if (cp != null) cp.LiberarPrancheta();
             Debug.Log("Todos os parafusos removidos! A carcaça pode ser aberta agora.");
         }
+    }
+
+    public void LiberarFechamento()
+    {
+        colisorCarcassa.enabled = true; // Ativa o colisor para permitir que o jogador clique na carcaça
+        prontoParaFechar = true;
     }
 }

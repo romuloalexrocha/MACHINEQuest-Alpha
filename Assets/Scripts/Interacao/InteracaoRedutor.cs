@@ -22,6 +22,7 @@ public class InteracaoRedutor : MonoBehaviour, IClicavel
 
     public void AoClicar()
     {
+        Debug.Log("Cliquei no Redutor!");
         if (!jaInteragiu) AbrirInterfaceUI();
     }
 

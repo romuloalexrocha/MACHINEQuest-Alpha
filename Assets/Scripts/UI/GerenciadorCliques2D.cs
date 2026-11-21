@@ -1,4 +1,5 @@
 using UnityEngine;
+//using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class GerenciadorCliques2D : MonoBehaviour
@@ -15,6 +16,10 @@ public class GerenciadorCliques2D : MonoBehaviour
 
     private void Update()
     {
+        // Dentro do Update(), antes de checar o clique no cenário:
+        //if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        //    return;
+
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             VerificarClique();
@@ -32,6 +37,7 @@ public class GerenciadorCliques2D : MonoBehaviour
 
         if (hit.collider != null)
         {
+            Debug.Log("Bati em: " + hit.collider.name);
             // Pega TODOS os componentes clicáveis no objeto (ex: ItemColetavel + DialogoGatilho2D)
             IClicavel[] objetosClicaveis = hit.collider.GetComponents<IClicavel>();
 

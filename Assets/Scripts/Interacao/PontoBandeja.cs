@@ -18,9 +18,7 @@ public class PontoBandeja : MonoBehaviour, IClicavel
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inventario = FindFirstObjectByType<ControleInventario>(FindObjectsInactive.Include);
-        gd = FindFirstObjectByType<GerenciadorDialogo>(FindObjectsInactive.Include);
-        ga = FindFirstObjectByType<GerenciadorAudio>(FindObjectsInactive.Include);
+        BuscarReferencias();
 
         // Pega o SpriteRenderer do próprio objeto se não foi arrastado
         if (srPonto == null) srPonto = GetComponent<SpriteRenderer>();
@@ -33,6 +31,37 @@ public class PontoBandeja : MonoBehaviour, IClicavel
             srPonto.enabled = false;
         }
         cameraPrincipal = Camera.main;
+    }
+
+    private void BuscarReferencias()
+    {
+        // Se o controle de inventário não estiver atribuído, tenta encontrá-lo na cena
+        if (inventario == null)
+        {
+            inventario = FindFirstObjectByType<ControleInventario>(FindObjectsInactive.Include);
+            if (inventario == null)
+            {
+                Debug.LogWarning("ControleInventario não encontrado na cena.");
+            }
+        }
+        // Se o gerenciador de diálogo não estiver atribuído, tenta encontrá-lo na cena
+        if (gd == null)
+        {
+            gd = FindFirstObjectByType<GerenciadorDialogo>(FindObjectsInactive.Include);
+            if (gd == null)
+            {
+                Debug.LogWarning("GerenciadorDialogo não encontrado na cena.");
+            }
+        }
+        // Se o gerenciador de áudio não estiver atribuído, tenta encontrá-lo na cena
+        if (ga == null)
+        {
+            ga = FindFirstObjectByType<GerenciadorAudio>(FindObjectsInactive.Include);
+            if (ga == null)
+            {
+                Debug.LogWarning("GerenciadorAudio não encontrado na cena.");
+            }
+        }
     }
 
     public void AoClicar()
