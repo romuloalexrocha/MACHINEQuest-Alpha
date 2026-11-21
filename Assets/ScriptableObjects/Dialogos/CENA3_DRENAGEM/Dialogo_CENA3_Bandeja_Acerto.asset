@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Dialogo_CENA3_Bandeja_Acerto
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "\xD3timo! A bandeja ficar\xE1 no seu invent\xE1rio. Para abri-lo,
+  - falaPersonagem: "\xD3timo! A bandeja ficar\xE1 no seu invent\xE1rio. Para abri-lo,
       clique no \xEDcone de INVENT\xC1RIO no canto superior da tela."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}

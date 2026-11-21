@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Dialogo_AcertoEngrenagem
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "Perfeito! Com a pe\xE7a trocada e a carca\xE7a fechada, precisamos
+  - falaPersonagem: "Perfeito! Com a pe\xE7a trocada e a carca\xE7a fechada, precisamos
       do lubrificante correto. Selecione o \xF3leo ISO VG 220 na mesa de equipamentos
       \xE0 DIREITA."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}

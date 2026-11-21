@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: Dialogo_CENA3_PontoBandeja_ComBandeja
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: Bandeja posicionada corretamente! Agora, aperte o plugue para
+  - falaPersonagem: Bandeja posicionada corretamente! Agora, aperte o plugue para
       travar a bandeja.
-    spritePersonagem: {fileID: 0}
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "Clique no redutor para aproximar (Zoom) e abra o plugue de dreno
+    spritePersonagem: {fileID: 21300000, guid: 9f2620029748e734988f0ce7535f4695, type: 3}
+  - falaPersonagem: "Clique no redutor para aproximar (Zoom) e abra o plugue de dreno
       para esvaziar o reservat\xF3rio."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}

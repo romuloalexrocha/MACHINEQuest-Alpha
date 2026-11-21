@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Dialogo_CarcassaAberta
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "\xD3timo, localizamos o problema! Agora, clique na prancheta
+  - falaPersonagem: "\xD3timo, localizamos o problema! Agora, clique na prancheta
       no canto inferior esquerdo e marque o defeito correspondente."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: 9f2620029748e734988f0ce7535f4695, type: 3}

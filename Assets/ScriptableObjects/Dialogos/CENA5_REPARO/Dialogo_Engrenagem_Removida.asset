@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Dialogo_Engrenagem_Removida
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "Pronto, a engrenagem danificada foi removida e o eixo est\xE1
+  - falaPersonagem: "Pronto, a engrenagem danificada foi removida e o eixo est\xE1
       livre. Agora, v\xE1 at\xE9 a mesa de pe\xE7as \xE0 DIREITA e pegue a engrenagem
       de reposi\xE7\xE3o compat\xEDvel."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: 8eee92ddd8b6c5146800cd847b8539f5, type: 3}

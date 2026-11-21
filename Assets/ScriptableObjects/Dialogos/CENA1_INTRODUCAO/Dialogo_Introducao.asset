@@ -13,18 +13,15 @@ MonoBehaviour:
   m_Name: Dialogo_Introducao
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "Ol\xE1! Voc\xEA deve ser o novo contratado... Me chamo S\xE9rgio,
+  - falaPersonagem: "Ol\xE1! Voc\xEA deve ser o novo contratado... Me chamo S\xE9rgio,
       \xE9 um prazer te conhecer. Voc\xEA ir\xE1 trabalhar na \xE1rea de manuten\xE7\xE3o
       de redutores, venha comigo."
-    spritePersonagem: {fileID: 0}
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "Aqui \xE9 onde voc\xEA ir\xE1 trabalhar. Para o trabalho de
+    spritePersonagem: {fileID: 21300000, guid: 8eee92ddd8b6c5146800cd847b8539f5, type: 3}
+  - falaPersonagem: "Aqui \xE9 onde voc\xEA ir\xE1 trabalhar. Para o trabalho de
       hoje, temos que identificar um problema: o redutor n\xE3o est\xE1 funcionando
       corretamente e precisamos desmont\xE1-lo para verificar."
-    spritePersonagem: {fileID: 0}
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "Aqui est\xE1 uma prancheta com os poss\xEDveis problemas. Voc\xEA
+    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
+  - falaPersonagem: "Aqui est\xE1 uma prancheta com os poss\xEDveis problemas. Voc\xEA
       deve identificar o defeito e marc\xE1-lo nela. Ela ficar\xE1 no canto inferior
       esquerdo da sua tela. Venha, vou te ensinar."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}

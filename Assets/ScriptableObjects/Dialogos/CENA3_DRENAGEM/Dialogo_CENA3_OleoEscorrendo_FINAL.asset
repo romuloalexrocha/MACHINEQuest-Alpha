@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Dialogo_CENA3_OleoEscorrendo_FINAL
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "O \xF3leo come\xE7ou a escorrer, muito bem! Aguarde at\xE9 o
+  - falaPersonagem: "O \xF3leo come\xE7ou a escorrer, muito bem! Aguarde at\xE9 o
       final."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: 8eee92ddd8b6c5146800cd847b8539f5, type: 3}

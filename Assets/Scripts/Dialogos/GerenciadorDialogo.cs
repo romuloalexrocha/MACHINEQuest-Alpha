@@ -92,7 +92,7 @@ public class GerenciadorDialogo : MonoBehaviour
         // Obtém a fala atual com base no índice
         DialogoLinhas falaAtual = dialogoAtual.linhasDialogo[indexListaDialogos];
         // Atualiza os campos da UI com as informações da fala atual
-        campoNome.text = falaAtual.nomePersonagem;
+        campoNome.text = "Sérgio";
         campoTexto.text = falaAtual.falaPersonagem;
         // Trata a imagem do avatar (só ativa se houver um sprite configurado)
         if (imagemAvatar != null)

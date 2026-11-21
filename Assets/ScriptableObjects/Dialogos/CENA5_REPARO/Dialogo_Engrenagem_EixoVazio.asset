@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Dialogo_Engrenagem_EixoVazio
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "O eixo est\xE1 pronto para receber a pe\xE7a nova, mas voc\xEA
+  - falaPersonagem: "O eixo est\xE1 pronto para receber a pe\xE7a nova, mas voc\xEA
       ainda n\xE3o pegou nenhuma engrenagem. Verifique a mesa de ferramentas \xE0
       DIREITA."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}

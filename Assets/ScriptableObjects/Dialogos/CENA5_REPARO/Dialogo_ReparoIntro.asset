@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Dialogo_ReparoIntro
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "Precisamos substituir essa engrenagem quebrada. Retire a pe\xE7a
+  - falaPersonagem: "Precisamos substituir essa engrenagem quebrada. Retire a pe\xE7a
       danificada e pegue uma nova na caixa de pe\xE7as \xE0 DIREITA."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}

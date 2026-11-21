@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Dialogo_BandejaIntro
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - nomePersonagem: "S\xE9rgio"
-    falaPersonagem: "\xD3timo! Agora preparados, vamos come\xE7ar. Primeiro, voc\xEA
+  - falaPersonagem: "\xD3timo! Agora preparados, vamos come\xE7ar. Primeiro, voc\xEA
       deve escorrer o \xF3leo de dentro do redutor. Clique na seta \xE0 DIREITA >>
       para ir at\xE9 a mesa de equipamentos de manuten\xE7\xE3o e pegar uma bandeja
       para despejar o \xF3leo."
-    spritePersonagem: {fileID: 0}
+    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}
