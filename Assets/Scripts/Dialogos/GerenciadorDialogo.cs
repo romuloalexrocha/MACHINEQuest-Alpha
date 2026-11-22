@@ -52,6 +52,7 @@ public class GerenciadorDialogo : MonoBehaviour
 
     public void IniciarDialogo(DialogoDados novoDialogo)
     {
+        if (novoDialogo == null) return;
         dialogoAtual = novoDialogo;
         indexListaDialogos = 0;
         caixaDialogo.SetActive(true); // Liga a caixa apenas UMA vez no início!

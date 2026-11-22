@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dialogo_Engrenagem_Encaixada
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - falaPersonagem: "Encaixe perfeito! A engrenagem nova est\xE1 bem posicionada
-      no eixo. Agora precisamos fechar a carca\xE7a do redutor antes de prosseguir."
-    spritePersonagem: {fileID: 21300000, guid: 8eee92ddd8b6c5146800cd847b8539f5, type: 3}
+  - falaPersonagem: "Perfeito! Com a pe\xE7a trocada e antes de fechar a carca\xE7a,
+      precisamos repor o lubrificante correto. Selecione o \xF3leo ISO VG 220 na
+      mesa de equipamentos \xE0 DIREITA."
+    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}

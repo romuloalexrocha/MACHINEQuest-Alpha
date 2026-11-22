@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 public class GerenciadorCliques2D : MonoBehaviour
 {
     [SerializeField] private GerenciadorAudio gerenciadorAudio;
+    [SerializeField] private GameObject painelPrancheta;
+    [SerializeField] private GameObject painelInventario;
+    [SerializeField] private GameObject painelMiniGame;
 
     private void Start()
     {
@@ -19,6 +22,13 @@ public class GerenciadorCliques2D : MonoBehaviour
         // Dentro do Update(), antes de checar o clique no cenário:
         //if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
         //    return;
+
+        if ((painelPrancheta != null && painelPrancheta.activeInHierarchy) ||
+    (painelInventario != null && painelInventario.activeInHierarchy) ||
+    (painelMiniGame != null && painelMiniGame.activeInHierarchy))
+        {
+            return;
+        }
 
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {

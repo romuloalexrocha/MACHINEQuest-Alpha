@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
-  m_Name: Dialogo_AcertoEngrenagem
+  m_Name: Dialogo_Lubrificacao_Concluida
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
-  - falaPersonagem: "Perfeito! Com a pe\xE7a trocada e a carca\xE7a fechada, precisamos
-      do lubrificante correto. Selecione o \xF3leo ISO VG 220 na mesa de equipamentos
-      \xE0 DIREITA."
+  - falaPersonagem: "N\xEDvel exato na marca vermelha! O redutor est\xE1 devidamente
+      lubrificado com \xD3leo ISO VG 220. Agora j\xE1 podemos fechar a carca\xE7a."
     spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}

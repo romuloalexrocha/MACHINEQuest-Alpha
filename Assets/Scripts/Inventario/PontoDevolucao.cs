@@ -47,9 +47,7 @@ public class PontoDevolucao : MonoBehaviour, IClicavel
 
             // Reativa o objeto original no local de origem
             if (objetoOriginalNaCena != null)
-            {
                 objetoOriginalNaCena.SetActive(true);
-            }
 
             // if (ga != null) ga.TocarSomAcerto();
             // if (gd != null && dialogoItemDevolvido != null) gd.IniciarDialogo(dialogoItemDevolvido);

@@ -30,6 +30,7 @@ public class PontoBandeja : MonoBehaviour, IClicavel
             srPonto.color = srBandeja.color;
             srPonto.enabled = false;
         }
+
         cameraPrincipal = Camera.main;
     }
 
