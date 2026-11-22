@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour
         // Carrega a cena de gameplay
         SceneManager.LoadScene(cenaJogo, LoadSceneMode.Single);
         // Carrega a cena da interface do usuário de forma aditiva
-        SceneManager.LoadScene(cenaUI, LoadSceneMode.Additive);
+        // SceneManager.LoadScene(cenaUI, LoadSceneMode.Additive);
     }
 
     public void AbrirOpcoes()

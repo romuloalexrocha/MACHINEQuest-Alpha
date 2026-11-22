@@ -9,12 +9,12 @@ public class GerenciadorCliques2D : MonoBehaviour
     [SerializeField] private GameObject painelInventario;
     [SerializeField] private GameObject painelMiniGame;
 
+    private DestaqueHover hoverAtual;
+
     private void Start()
     {
         if (gerenciadorAudio == null)
-        {
             gerenciadorAudio = FindFirstObjectByType<GerenciadorAudio>(FindObjectsInactive.Include);
-        }
     }
 
     private void Update()
@@ -27,24 +27,55 @@ public class GerenciadorCliques2D : MonoBehaviour
     (painelInventario != null && painelInventario.activeInHierarchy) ||
     (painelMiniGame != null && painelMiniGame.activeInHierarchy))
         {
+            LimparHoverAtual();
             return;
         }
 
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            VerificarClique();
-        }
-    }
-
-    private void VerificarClique()
-    {
-        if (Camera.main == null) return;
+        if (Mouse.current == null || Camera.main == null) return;
 
         Vector2 posicaoMouse = Mouse.current.position.ReadValue();
         Vector2 posicaoMundo = Camera.main.ScreenToWorldPoint(posicaoMouse);
-
         RaycastHit2D hit = Physics2D.Raycast(posicaoMundo, Vector2.zero);
 
+        VerificarHover(hit);
+
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+            VerificarClique(hit);
+    }
+
+    private void VerificarHover(RaycastHit2D hit)
+    {
+        DestaqueHover novoHover = null;
+
+        if (hit.collider != null)
+        {
+            novoHover = hit.collider.GetComponent<DestaqueHover>();
+        }
+
+        // Se o mouse saiu do objeto anterior ou passou para outro objeto
+        if (novoHover != hoverAtual)
+        {
+            LimparHoverAtual();
+            hoverAtual = novoHover;
+
+            if (hoverAtual != null)
+            {
+                hoverAtual.AtivarDestaque();
+            }
+        }
+    }
+
+    private void LimparHoverAtual()
+    {
+        if (hoverAtual != null)
+        {
+            hoverAtual.DesativarDestaque();
+            hoverAtual = null;
+        }
+    }
+
+    private void VerificarClique(RaycastHit2D hit)
+    {
         if (hit.collider != null)
         {
             Debug.Log("Bati em: " + hit.collider.name);
