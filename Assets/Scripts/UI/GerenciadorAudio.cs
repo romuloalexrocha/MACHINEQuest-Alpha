@@ -11,6 +11,12 @@ public class GerenciadorAudio : MonoBehaviour
     [SerializeField] private AudioClip somAcerto;
     [SerializeField] private AudioClip somErro;
 
+    private void Start()
+    {
+        // Garante que o volume salvo seja aplicado mesmo se o jogo não começar pelo Menu
+        AudioListener.volume = PlayerPrefs.GetFloat("VolumeGeral", 1f);
+    }
+
     private void Update()
     {
         // Detecta o clique esquerdo usando o New Input System
