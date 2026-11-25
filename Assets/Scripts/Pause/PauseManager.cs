@@ -8,13 +8,11 @@ public class PauseManager : MonoBehaviour
     public void AbrirOpcoes()
     {
         PainelOpcoes.SetActive(true);
-        Time.timeScale = 0f;
     }
 
     public void FecharOpcoes()
     {
         PainelOpcoes.SetActive(false);
-        Time.timeScale = 1f;
     }
 
     public void VoltarMenu()
