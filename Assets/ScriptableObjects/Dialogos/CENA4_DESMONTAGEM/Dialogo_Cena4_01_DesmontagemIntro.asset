@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
-  m_Name: Dialogo_Cena4_DesmontagemIntro
+  m_Name: Dialogo_Cena4_01_DesmontagemIntro
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   etapa: 4
   linhasDialogo:
   - falaPersonagem: "Excelente. Agora precisamos desmontar a carca\xE7a do redutor
       para verificar o que est\xE1 causando o problema. Para isso, precisamos de
-      uma chave adequada. Clique na seta para CIMA ^^ e pegue a chave no quadro de
-      ferramentas."
+      uma chave adequada."
+    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
+  - falaPersonagem: "Clique no bot\xE3o no topo da tela escrito MESA FERRAMENTAS.
+      L\xE1 voc\xEA vai ter v\xE1rias ferramentas sobre a mesa, precisamos da Chave
+      Allen."
     spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}

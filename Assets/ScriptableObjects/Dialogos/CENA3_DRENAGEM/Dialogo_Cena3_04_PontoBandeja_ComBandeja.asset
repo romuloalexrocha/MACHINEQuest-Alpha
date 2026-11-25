@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
-  m_Name: Dialogo_Cena4_CarcassaAberta
+  m_Name: Dialogo_Cena3_04_PontoBandeja_ComBandeja
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
-  etapa: 4
+  etapa: 3
   linhasDialogo:
-  - falaPersonagem: "\xD3timo, localizamos o problema! Agora, clique na prancheta
-      no canto inferior esquerdo e marque o defeito correspondente."
+  - falaPersonagem: "Bandeja posicionada corretamente! Agora podemos drenar o \xF3leo
+      do Redutor com seguran\xE7a."
     spritePersonagem: {fileID: 21300000, guid: 9f2620029748e734988f0ce7535f4695, type: 3}
+  - falaPersonagem: "Est\xE1 vendo o buj\xE3o de dreno na Vis\xE3o Traseira? CLIQUE
+      nele para destravar o plugue e espere o \xF3leo escorrer totalmente para a
+      bandeja."
+    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}

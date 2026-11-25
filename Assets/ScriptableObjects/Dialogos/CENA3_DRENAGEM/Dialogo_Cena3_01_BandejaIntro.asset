@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
-  m_Name: Dialogo_Cena4_UsarChave
+  m_Name: Dialogo_Cena3_01_BandejaIntro
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
-  etapa: 4
+  etapa: 3
   linhasDialogo:
-  - falaPersonagem: "Agora, com a chave em m\xE3os, aproxime do redutor e retire
-      os parafusos da carca\xE7a."
-    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
+  - falaPersonagem: "\xD3timo! Agora preparados, vamos come\xE7ar. Primeiro, voc\xEA
+      deve escorrer o \xF3leo de dentro do redutor. Clique em MESA INSUMOS para ir
+      at\xE9 a mesa de insumos e pegar uma bandeja para despejar o \xF3leo."
+    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}
