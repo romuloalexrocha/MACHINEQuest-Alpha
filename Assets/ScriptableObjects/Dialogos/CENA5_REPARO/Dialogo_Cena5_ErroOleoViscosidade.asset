@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena5_ErroOleoViscosidade
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 5
   linhasDialogo:
   - falaPersonagem: "Esse n\xE3o \xE9 o \xF3leo correto. Usar um \xF3leo com a viscosidade
       errada pode causar sobreaquecimento e desgastar as pe\xE7as rapidamente. Procure

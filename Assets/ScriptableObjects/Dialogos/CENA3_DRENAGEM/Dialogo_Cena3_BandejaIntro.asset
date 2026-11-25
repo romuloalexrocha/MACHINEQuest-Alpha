@@ -15,7 +15,6 @@ MonoBehaviour:
   etapa: 3
   linhasDialogo:
   - falaPersonagem: "\xD3timo! Agora preparados, vamos come\xE7ar. Primeiro, voc\xEA
-      deve escorrer o \xF3leo de dentro do redutor. Clique na seta \xE0 DIREITA >>
-      para ir at\xE9 a mesa de equipamentos de manuten\xE7\xE3o e pegar uma bandeja
-      para despejar o \xF3leo."
+      deve escorrer o \xF3leo de dentro do redutor. Clique em MESA INSUMOS para ir
+      at\xE9 a mesa de insumos e pegar uma bandeja para despejar o \xF3leo."
     spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}

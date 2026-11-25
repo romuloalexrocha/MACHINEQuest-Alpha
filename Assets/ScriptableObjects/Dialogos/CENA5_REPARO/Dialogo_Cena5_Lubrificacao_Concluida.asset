@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena5_Lubrificacao_Concluida
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 5
   linhasDialogo:
   - falaPersonagem: "N\xEDvel exato na marca vermelha! O redutor est\xE1 devidamente
       lubrificado com \xD3leo ISO VG 220. Agora j\xE1 podemos fechar a carca\xE7a."

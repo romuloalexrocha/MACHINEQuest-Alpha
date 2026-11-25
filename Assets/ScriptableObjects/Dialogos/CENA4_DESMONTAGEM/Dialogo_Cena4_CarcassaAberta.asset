@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena4_CarcassaAberta
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 4
   linhasDialogo:
   - falaPersonagem: "\xD3timo, localizamos o problema! Agora, clique na prancheta
       no canto inferior esquerdo e marque o defeito correspondente."

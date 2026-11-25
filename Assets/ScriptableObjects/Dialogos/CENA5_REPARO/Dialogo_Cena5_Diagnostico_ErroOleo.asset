@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena5_Diagnostico_ErroOleo
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 5
   linhasDialogo:
   - falaPersonagem: "O \xF3leo j\xE1 foi drenado corretamente para a bandeja e n\xE3o
       apresenta limalhas met\xE1licas graves que justifiquem a falha sozinho. Foque

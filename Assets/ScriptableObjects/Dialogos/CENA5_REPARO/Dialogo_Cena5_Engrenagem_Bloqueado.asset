@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena5_Engrenagem_Bloqueado
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 5
   linhasDialogo:
   - falaPersonagem: "Calma l\xE1! Antes de mexer nas engrenagens, precisamos abrir
       a carca\xE7a do redutor e registrar o diagn\xF3stico correto na prancheta."

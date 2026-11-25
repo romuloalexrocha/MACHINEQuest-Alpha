@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena5_ReparoIntro
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 5
   linhasDialogo:
   - falaPersonagem: "Precisamos substituir essa engrenagem quebrada. Retire a pe\xE7a
       danificada e pegue uma nova na caixa de pe\xE7as \xE0 DIREITA."

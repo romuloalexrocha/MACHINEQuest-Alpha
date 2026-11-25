@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena4_DesmontagemIntro
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 4
   linhasDialogo:
   - falaPersonagem: "Excelente. Agora precisamos desmontar a carca\xE7a do redutor
       para verificar o que est\xE1 causando o problema. Para isso, precisamos de

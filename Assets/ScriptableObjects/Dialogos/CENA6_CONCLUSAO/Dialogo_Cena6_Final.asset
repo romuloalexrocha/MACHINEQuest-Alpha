@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena6_Final
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 6
   linhasDialogo:
   - falaPersonagem: "Muito bem, conseguimos! Excelente trabalho, novato! \U0001F603\U0001F44D"
     spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}

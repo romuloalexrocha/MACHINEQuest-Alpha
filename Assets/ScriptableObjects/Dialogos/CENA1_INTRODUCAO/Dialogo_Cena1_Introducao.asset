@@ -22,7 +22,7 @@ MonoBehaviour:
       hoje, temos que identificar um problema: o redutor n\xE3o est\xE1 funcionando
       corretamente e precisamos desmont\xE1-lo para verificar."
     spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
-  - falaPersonagem: "Aqui est\xE1 uma prancheta com os poss\xEDveis problemas. Voc\xEA
-      deve identificar o defeito e marc\xE1-lo nela. Ela ficar\xE1 no canto inferior
-      esquerdo da sua tela. Venha, vou te ensinar."
+  - falaPersonagem: "No canto inferior esquerdo h\xE1 uma prancheta com os poss\xEDveis
+      problemas. Voc\xEA deve identificar o defeito do redutor depois de abri-lo
+      e marc\xE1-lo nela."
     spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena5_Engrenagem_Errada
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 5
   linhasDialogo:
   - falaPersonagem: "Essa engrenagem n\xE3o encaixa aqui - o n\xFAmero de dentes
       \xE9 incompat\xEDvel com a rela\xE7\xE3o deste eixo. Devolva essa pe\xE7a na

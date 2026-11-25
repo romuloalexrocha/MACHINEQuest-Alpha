@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena5_Engrenagem_Removida
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 5
   linhasDialogo:
   - falaPersonagem: "Pronto, a engrenagem danificada foi removida e o eixo est\xE1
       livre. Agora, v\xE1 at\xE9 a mesa de pe\xE7as \xE0 DIREITA e pegue a engrenagem

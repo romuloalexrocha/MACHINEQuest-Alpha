@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   etapa: 2
   linhasDialogo:
-  - falaPersonagem: "Esse \xE9 o nosso redutor, mas antes, voc\xEA precisa colocar
-      os equipamentos de prote\xE7\xE3o necess\xE1rios para manuse\xE1-lo."
+  - falaPersonagem: "Antes de mais nada, voc\xEA precisa colocar os equipamentos
+      de prote\xE7\xE3o necess\xE1rios para manuse\xE1-lo. Vamos trabalhar com seguran\xE7a
+      e prevenir os riscos!"
     spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
-  - falaPersonagem: "Ao clicar na seta para a ESQUERDA << voc\xEA ir\xE1 para a mesa
-      de itens de seguran\xE7a. Selecione os itens corretos para o procedimento.
-      Ao selecionar, eles ir\xE3o para o seu invent\xE1rio de EPIs localizado na
-      parte inferior da tela."
+  - falaPersonagem: "Ao clicar em MESA EPIs, voc\xEA ir\xE1 para a mesa de itens
+      de seguran\xE7a. Selecione os itens corretos para o procedimento. Ao selecionar,
+      eles ir\xE3o para o seu invent\xE1rio de EPIs localizado na parte inferior
+      direita da tela."
     spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}

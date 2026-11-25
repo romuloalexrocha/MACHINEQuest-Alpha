@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena4_Diagnostico_Erro
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 4
   linhasDialogo:
   - falaPersonagem: "Hmm, n\xE3o parece ser esse o problema principal. Confira  com
       mais aten\xE7\xE3o o interior do Redutor para ver se n\xE3o tem alguma pe\xE7a

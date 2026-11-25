@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena5_Aviso_Troca
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 5
   linhasDialogo:
   - falaPersonagem: "Calma! N\xE3o adianta lubrificar o redutor agora com a engrenagem
       danificada no eixo. Primeiro fa\xE7a a substitui\xE7\xE3o pela engrenagem nova."

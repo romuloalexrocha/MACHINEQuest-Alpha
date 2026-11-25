@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena5_Engrenagem_EixoVazio
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 5
   linhasDialogo:
   - falaPersonagem: "O eixo est\xE1 pronto para receber a pe\xE7a nova, mas voc\xEA
       ainda n\xE3o pegou nenhuma engrenagem. Verifique a mesa de ferramentas \xE0

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
   m_Name: Dialogo_Cena4_SemChaveAllen
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 4
   linhasDialogo:
   - falaPersonagem: "N\xE3o \xE9 poss\xEDvel desparafusar sem uma Chave Allen!"
     spritePersonagem: {fileID: 21300000, guid: 19c21000310d60b42900e4e6b1623c15, type: 3}
