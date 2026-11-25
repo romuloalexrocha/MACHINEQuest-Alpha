@@ -9,5 +9,8 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "NovoDialogo", menuName = "Sistema de Diálogo/Dados de Diálogo")]
 public class DialogoDados : ScriptableObject
 {
+    [Header("Identificação da Etapa")]
+    public int etapa;
+
     public List<DialogoLinhas> linhasDialogo; // Lista de linhas de diálogo que compõem o diálogo
 }

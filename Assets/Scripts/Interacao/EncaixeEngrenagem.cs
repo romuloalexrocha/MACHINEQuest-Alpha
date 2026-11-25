@@ -73,7 +73,7 @@ public class EncaixeEngrenagem : MonoBehaviour, IClicavel
         // 4. Tenta encaixar a nova engrenagem a partir do inventário
         if (ci == null) return;
 
-        if (ci.TemItem(nomeEngrCorreta))
+        if (ci.EstaComItemEquipado(nomeEngrCorreta))
         {
             if (ci != null) ci.RemoverItem(nomeEngrCorreta);
             engrNovaEncaixada = true;
@@ -88,7 +88,7 @@ public class EncaixeEngrenagem : MonoBehaviour, IClicavel
 
         foreach (string nomeErrado in nomesEngrErradas)
         {
-            if (ci.TemItem(nomeErrado))
+            if (ci.EstaComItemEquipado(nomeErrado))
             {
                 if (ga != null) ga.TocarSomErro();
                 if (gd != null && dialogoEngrErrada != null) gd.IniciarDialogo(dialogoEngrErrada);

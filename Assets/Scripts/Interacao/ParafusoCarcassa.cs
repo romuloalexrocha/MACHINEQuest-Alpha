@@ -16,7 +16,6 @@ public class ParafusoCarcassa : MonoBehaviour, IClicavel
     [SerializeField] private DialogoDados dialogoSemChave;
     [SerializeField] private DialogoDados dialogoSemDrenar; // Opcional
 
-    private Camera cameraPrincipal;
     public bool temChave = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,8 +25,6 @@ public class ParafusoCarcassa : MonoBehaviour, IClicavel
 
         if (srParafuso == null) srParafuso = GetComponent<SpriteRenderer>();
         if (colParafuso == null) colParafuso = GetComponent<Collider2D>();
-
-        cameraPrincipal = Camera.main;
     }
 
     private void BuscarReferencias()
@@ -84,7 +81,7 @@ public class ParafusoCarcassa : MonoBehaviour, IClicavel
     private void TentarDesparafusar()
     {
         // Checa se o jogador tem a chave no inventário
-        if (inventario != null && inventario.TemItem("Chave Allen"))
+        if (inventario != null && inventario.EstaComItemEquipado("Chave Allen"))
         {
             temChave = true;
             colParafuso.enabled = false; // Desativa o collider do parafuso

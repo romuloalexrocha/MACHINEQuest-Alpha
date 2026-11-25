@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
-  m_Name: Dialogo_CENA3_PontoBandeja_SemBandeja
+  m_Name: Dialogo_Cena3_PontoBandeja_SemBandeja
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
+  etapa: 3
   linhasDialogo:
   - falaPersonagem: "Epa! Voc\xEA n\xE3o pode drenar o \xF3leo sem antes posicionar
       uma bandeja!"
