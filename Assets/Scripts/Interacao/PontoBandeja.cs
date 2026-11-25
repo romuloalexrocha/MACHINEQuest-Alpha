@@ -4,7 +4,7 @@ public class PontoBandeja : MonoBehaviour, IClicavel
 {
     [SerializeField] private ControleInventario inventario;
     [SerializeField] private SpriteRenderer srBandeja;
-    [SerializeField] private SpriteRenderer srPonto;
+    [SerializeField] private SpriteRenderer srPontoBandeja;
     [SerializeField] private GerenciadorDialogo gd;
     [SerializeField] private GerenciadorAudio ga;
     [SerializeField] private string nomeItemBandeja = "Bandeja"; // Mesmo nome usado no ItemColetavel!
@@ -12,7 +12,6 @@ public class PontoBandeja : MonoBehaviour, IClicavel
     [Header("Diálogos de Referência")]
     [SerializeField] private DialogoDados dialogoSemBandeja, dialogoComBandeja;
 
-    private Camera cameraPrincipal;
     public bool bandejaPosicionada = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,17 +20,17 @@ public class PontoBandeja : MonoBehaviour, IClicavel
         BuscarReferencias();
 
         // Pega o SpriteRenderer do próprio objeto se não foi arrastado
-        if (srPonto == null) srPonto = GetComponent<SpriteRenderer>();
+        if (srPontoBandeja == null) srPontoBandeja = GetComponent<SpriteRenderer>();
 
         // Copia a imagem do item da mesa e desativa a visualização no dreno
-        if (srBandeja != null && srPonto != null)
+        if (srBandeja != null && srPontoBandeja != null)
         {
-            srPonto.sprite = srBandeja.sprite;
-            srPonto.color = srBandeja.color;
-            srPonto.enabled = false;
+            // srPontoBandeja.sprite = srBandeja.sprite;
+            // srPontoBandeja.color = srBandeja.color;
+            srPontoBandeja.enabled = true;
         }
 
-        cameraPrincipal = Camera.main;
+
     }
 
     private void BuscarReferencias()
@@ -77,9 +76,10 @@ public class PontoBandeja : MonoBehaviour, IClicavel
         {
             bandejaPosicionada = true;
 
-            if (srPonto != null)
+            if (srPontoBandeja != null)
             {
-                srPonto.enabled = true; // Exibe a imagem sob o dreno!
+                srPontoBandeja.sprite = srBandeja.sprite;
+                srPontoBandeja.enabled = true; // Exibe a imagem sob o dreno!
             }
 
             if (ga != null) ga.TocarSomAcerto();

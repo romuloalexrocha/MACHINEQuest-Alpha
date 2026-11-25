@@ -54,6 +54,21 @@ public class GerenciadorDialogo : MonoBehaviour
         }
     }
 
+    public int RetornarValorDeEtapa()
+    {
+        if (dialogoEmFila != null)
+        {
+            return dialogoEmFila.etapa;
+        }
+
+        if (dialogoAtual != null)
+        {
+            return dialogoAtual.etapa;
+        }
+
+        return 0; // Nenhuma etapa/diálogo iniciado ainda
+    }
+
     public void AvancarParaProximaFala()
     {
         if (jogoPausado) return;

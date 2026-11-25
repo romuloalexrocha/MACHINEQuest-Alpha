@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bacc3a3f47127c46926fb218826dafa, type: 3}
-  m_Name: Dialogo_CENA3_Bandeja_Erro
+  m_Name: Dialogo_Cena3_Bandeja_Erro
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   linhasDialogo:
   - falaPersonagem: "N\xE3o \xE9 desse item que precisamos, precisamos de uma bandeja
