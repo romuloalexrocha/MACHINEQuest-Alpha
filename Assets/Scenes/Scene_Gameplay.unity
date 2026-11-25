@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Protetor Auricular
+  tipoItem: 0
   iconeItem: {fileID: 21300000, guid: fc8208c84ded80c45a16c34f6aaf316c, type: 3}
   ehEPI: 1
   controleInventario: {fileID: 0}
@@ -539,6 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Engrenagem_20D
+  tipoItem: 1
   iconeItem: {fileID: -2413806693520163455, guid: a12e077abc3154e4f90136c4197a850f, type: 3}
   ehEPI: 0
   controleInventario: {fileID: 0}
@@ -610,13 +612,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125171249}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26, y: -1, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1966170104}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1214041029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &155106152
 GameObject:
@@ -1112,6 +1114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: "Luvas Qu\xEDmicas"
+  tipoItem: 0
   iconeItem: {fileID: 21300000, guid: c9b1db28ca9ed294388f9669068e53b4, type: 3}
   ehEPI: 1
   controleInventario: {fileID: 0}
@@ -1539,6 +1542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Chave Allen
+  tipoItem: 0
   iconeItem: {fileID: 21300000, guid: eed8ad1f19e115c49840698cddfa3494, type: 3}
   ehEPI: 0
   controleInventario: {fileID: 0}
@@ -1656,12 +1660,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315852008}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 12, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1214041029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319535211
 GameObject:
@@ -1786,6 +1790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Graxa_Litio
+  tipoItem: 2
   iconeItem: {fileID: 0}
   ehEPI: 0
   controleInventario: {fileID: 0}
@@ -1903,12 +1908,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362870454}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1214041029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &385410701
 GameObject:
@@ -1943,6 +1948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: "Cal\xE7ados de Seguran\xE7a"
+  tipoItem: 0
   iconeItem: {fileID: 21300000, guid: 182a3c3199919e046a94a6ad4c6a9aa9, type: 3}
   ehEPI: 1
   controleInventario: {fileID: 0}
@@ -2115,6 +2121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: "\xD3culos"
+  tipoItem: 0
   iconeItem: {fileID: 21300000, guid: ca2debf7007184f4cbb2c462727f3c11, type: 3}
   ehEPI: 1
   controleInventario: {fileID: 0}
@@ -2476,6 +2483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Oleo_ISO_VG_220
+  tipoItem: 2
   iconeItem: {fileID: 0}
   ehEPI: 0
   controleInventario: {fileID: 0}
@@ -2593,11 +2601,50 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572703751}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14, y: -2, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 1214041029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &619552291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619552292}
+  m_Layer: 0
+  m_Name: PDs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &619552292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619552291}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1787842031}
+  - {fileID: 1024868279}
+  - {fileID: 1777906811}
+  - {fileID: 1325599704}
+  - {fileID: 1299403873}
+  - {fileID: 1114734994}
+  - {fileID: 1733544895}
+  - {fileID: 1948422705}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647590651
@@ -2889,6 +2936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Avental
+  tipoItem: 0
   iconeItem: {fileID: 21300000, guid: 9d56326c2e499704c98b4416d2dc0fdf, type: 3}
   ehEPI: 1
   controleInventario: {fileID: 0}
@@ -4250,6 +4298,7 @@ GameObject:
   - component: {fileID: 1024868279}
   - component: {fileID: 1024868278}
   - component: {fileID: 1024868277}
+  - component: {fileID: 1024868280}
   m_Layer: 0
   m_Name: PD_Engrenagem_14D
   m_TagString: Untagged
@@ -4326,13 +4375,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024868276}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24, y: 0.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24, y: -11.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 619552292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1024868280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024868276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a337ba8db0fe30048b2b8f804a38d125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorPontoDevolucao
+  objetoBordaAmarela: {fileID: 1592851901}
+  mostrarApenasComItemSelecionado: 1
 --- !u!1 &1090076704
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,6 +4568,7 @@ GameObject:
   - component: {fileID: 1114734994}
   - component: {fileID: 1114734993}
   - component: {fileID: 1114734992}
+  - component: {fileID: 1114734995}
   m_Layer: 0
   m_Name: PD_Oleo_Hidraulico
   m_TagString: Untagged
@@ -4581,11 +4645,64 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114734991}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: -2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16, y: -14, z: 0}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 619552292}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1114734995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114734991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a337ba8db0fe30048b2b8f804a38d125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorPontoDevolucao
+  objetoBordaAmarela: {fileID: 1349966385}
+  mostrarApenasComItemSelecionado: 1
+--- !u!1 &1214041028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1214041029}
+  m_Layer: 0
+  m_Name: Items
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1214041029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214041028}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1664830935}
+  - {fileID: 315852012}
+  - {fileID: 1592851904}
+  - {fileID: 125171253}
+  - {fileID: 1262660207}
+  - {fileID: 1349966389}
+  - {fileID: 362870458}
+  - {fileID: 572703755}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1262660203
@@ -4656,6 +4773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Engrenagem_28D
+  tipoItem: 1
   iconeItem: {fileID: -2413806693520163455, guid: a12e077abc3154e4f90136c4197a850f, type: 3}
   ehEPI: 0
   controleInventario: {fileID: 0}
@@ -4727,13 +4845,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262660203}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24, y: -2, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4, y: -2, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 215194437}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1214041029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1274648952
 GameObject:
@@ -4747,6 +4865,7 @@ GameObject:
   - component: {fileID: 1274648955}
   - component: {fileID: 1274648954}
   - component: {fileID: 1274648953}
+  - component: {fileID: 1274648957}
   m_Layer: 0
   m_Name: PontoBandeja
   m_TagString: Untagged
@@ -4895,6 +5014,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1709859456}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1274648957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274648952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a337ba8db0fe30048b2b8f804a38d125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorPontoDevolucao
+  objetoBordaAmarela: {fileID: 1664830930}
+  mostrarApenasComItemSelecionado: 1
 --- !u!1 &1299403870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4906,6 +5039,7 @@ GameObject:
   - component: {fileID: 1299403873}
   - component: {fileID: 1299403872}
   - component: {fileID: 1299403871}
+  - component: {fileID: 1299403874}
   m_Layer: 0
   m_Name: PD_Bandeja
   m_TagString: Untagged
@@ -4982,13 +5116,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299403870}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 619552292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1299403874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299403870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a337ba8db0fe30048b2b8f804a38d125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorPontoDevolucao
+  objetoBordaAmarela: {fileID: 1664830930}
+  mostrarApenasComItemSelecionado: 1
 --- !u!1 &1325599701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5000,6 +5148,7 @@ GameObject:
   - component: {fileID: 1325599704}
   - component: {fileID: 1325599703}
   - component: {fileID: 1325599702}
+  - component: {fileID: 1325599705}
   m_Layer: 0
   m_Name: PD_Engrenagem_28D
   m_TagString: Untagged
@@ -5076,13 +5225,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325599701}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24, y: -2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24, y: -14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 619552292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325599705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325599701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a337ba8db0fe30048b2b8f804a38d125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorPontoDevolucao
+  objetoBordaAmarela: {fileID: 1262660203}
+  mostrarApenasComItemSelecionado: 1
 --- !u!1 &1349966385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5115,6 +5278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Oleo_Hidraulico
+  tipoItem: 2
   iconeItem: {fileID: 0}
   ehEPI: 0
   controleInventario: {fileID: 0}
@@ -5232,12 +5396,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349966385}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: -2, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1214041029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1473350026
 GameObject:
@@ -5593,6 +5757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Engrenagem_14D
+  tipoItem: 1
   iconeItem: {fileID: -2413806693520163455, guid: a12e077abc3154e4f90136c4197a850f, type: 3}
   ehEPI: 0
   controleInventario: {fileID: 0}
@@ -5664,13 +5829,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592851901}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24, y: 0.5, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4, y: 0.5, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 729719497}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1214041029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1592851905
 CircleCollider2D:
@@ -5890,6 +6055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemColetavel
   nomeItem: Bandeja
+  tipoItem: 0
   iconeItem: {fileID: 21300000, guid: 12a455031c29f9149ace0cbad6ec52a1, type: 3}
   ehEPI: 0
   controleInventario: {fileID: 0}
@@ -6007,12 +6173,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664830930}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1214041029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709859455
 GameObject:
@@ -6219,6 +6385,7 @@ GameObject:
   - component: {fileID: 1733544895}
   - component: {fileID: 1733544894}
   - component: {fileID: 1733544893}
+  - component: {fileID: 1733544896}
   m_Layer: 0
   m_Name: PD_Oleo_ISO_VG_220
   m_TagString: Untagged
@@ -6295,13 +6462,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733544892}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14, y: -2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14, y: -14, z: 0}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 619552292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733544896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733544892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a337ba8db0fe30048b2b8f804a38d125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorPontoDevolucao
+  objetoBordaAmarela: {fileID: 572703751}
+  mostrarApenasComItemSelecionado: 1
 --- !u!1 &1752483076
 GameObject:
   m_ObjectHideFlags: 0
@@ -6503,6 +6684,7 @@ GameObject:
   - component: {fileID: 1777906811}
   - component: {fileID: 1777906810}
   - component: {fileID: 1777906809}
+  - component: {fileID: 1777906812}
   m_Layer: 0
   m_Name: PD_Engrenagem_20D
   m_TagString: Untagged
@@ -6579,13 +6761,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777906808}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26, y: -1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26, y: -13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 619552292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1777906812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777906808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a337ba8db0fe30048b2b8f804a38d125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorPontoDevolucao
+  objetoBordaAmarela: {fileID: 125171249}
+  mostrarApenasComItemSelecionado: 1
 --- !u!1 &1787842028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6597,6 +6793,7 @@ GameObject:
   - component: {fileID: 1787842031}
   - component: {fileID: 1787842030}
   - component: {fileID: 1787842029}
+  - component: {fileID: 1787842032}
   m_Layer: 0
   m_Name: PD_ChaveAllen
   m_TagString: Untagged
@@ -6673,13 +6870,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787842028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 12, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 619552292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1787842032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787842028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a337ba8db0fe30048b2b8f804a38d125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorPontoDevolucao
+  objetoBordaAmarela: {fileID: 315852008}
+  mostrarApenasComItemSelecionado: 1
 --- !u!1 &1824166682
 GameObject:
   m_ObjectHideFlags: 0
@@ -6875,6 +7086,7 @@ GameObject:
   - component: {fileID: 1948422705}
   - component: {fileID: 1948422704}
   - component: {fileID: 1948422703}
+  - component: {fileID: 1948422706}
   m_Layer: 0
   m_Name: PD_Graxa_Litio
   m_TagString: Untagged
@@ -6951,13 +7163,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948422702}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 619552292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1948422706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948422702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a337ba8db0fe30048b2b8f804a38d125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorPontoDevolucao
+  objetoBordaAmarela: {fileID: 362870454}
+  mostrarApenasComItemSelecionado: 1
 --- !u!1 &1956897079
 GameObject:
   m_ObjectHideFlags: 0
@@ -7488,26 +7714,12 @@ SceneRoots:
   - {fileID: 1837749085}
   - {fileID: 98368577}
   - {fileID: 1752483077}
-  - {fileID: 1664830935}
-  - {fileID: 315852012}
-  - {fileID: 159564005}
-  - {fileID: 1592851904}
-  - {fileID: 125171253}
-  - {fileID: 1262660207}
-  - {fileID: 1787842031}
-  - {fileID: 1024868279}
-  - {fileID: 1777906811}
-  - {fileID: 1325599704}
-  - {fileID: 1299403873}
-  - {fileID: 1349966389}
-  - {fileID: 1114734994}
-  - {fileID: 572703755}
-  - {fileID: 1733544895}
-  - {fileID: 362870458}
-  - {fileID: 1948422705}
+  - {fileID: 1214041029}
+  - {fileID: 619552292}
   - {fileID: 428574696}
   - {fileID: 2138160642}
   - {fileID: 205592014}
   - {fileID: 954937607}
+  - {fileID: 159564005}
   - {fileID: 2111205152}
   - {fileID: 1661784740}

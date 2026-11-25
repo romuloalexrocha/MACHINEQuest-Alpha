@@ -12,6 +12,7 @@ public class ControleInventario : MonoBehaviour
     [SerializeField] private Image iconeItemEquipado; // Image solta no Canvas (Raycast Target DESMARCADO!)
 
     private List<string> itensColetados = new List<string>();
+    private List<TipoItem> tiposColetados = new List<TipoItem>();
     private List<Sprite> iconesColetados = new List<Sprite>();
     private List<Color> coresColetadas = new List<Color>();
 
@@ -87,14 +88,27 @@ public class ControleInventario : MonoBehaviour
         gavetaSlots.SetActive(!gavetaSlots.activeSelf);
     }
 
-    public bool AdicionarItem(string nomeItem, Sprite iconeItem, Color corItem = default)
+    public bool AdicionarItem(string nomeItem, TipoItem tipoItem, Sprite iconeItem, Color corItem = default)
     {
         if (itensColetados.Count >= 5) return false;
+
+        // Bloqueia coleta se já existe um item do mesmo tipo (Engrenagem ou Lubrificante)
+        if (tipoItem != TipoItem.Geral && tiposColetados.Contains(tipoItem))
+        {
+            return false;
+        }
+
+        // Evita também duplicar o mesmo item exato
+        if (itensColetados.Contains(nomeItem))
+        {
+            return false;
+        }
 
         // Se a cor não for informada, usa branco como cor padrão pura
         if (corItem == default) corItem = Color.white;
 
         itensColetados.Add(nomeItem);
+        tiposColetados.Add(tipoItem);
         iconesColetados.Add(iconeItem);
         coresColetadas.Add(corItem);
 
@@ -105,6 +119,12 @@ public class ControleInventario : MonoBehaviour
     public bool TemItem(string nomeItem)
     {
         return itensColetados.Contains(nomeItem);
+    }
+
+    // Use este método nas interações do Redutor para exigir que o item esteja equipado na mão
+    public bool EstaComItemEquipado(string nomeItem)
+    {
+        return !string.IsNullOrEmpty(itemEquipado) && itemEquipado == nomeItem;
     }
 
     private void AtualizarInterface()
@@ -140,6 +160,7 @@ public class ControleInventario : MonoBehaviour
             {
                 // Remove da mesma posição nas 3 listas paralelas
                 itensColetados.RemoveAt(i);
+                tiposColetados.RemoveAt(i);
                 iconesColetados.RemoveAt(i);
                 coresColetadas.RemoveAt(i);
 

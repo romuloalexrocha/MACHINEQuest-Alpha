@@ -14,38 +14,58 @@ public class GerenciadorDialogo : MonoBehaviour
     [SerializeField] private Image imagemAvatar;
     [SerializeField] private GameObject caixaDialogo;
 
-    private DialogoDados dialogoEmFila; // Armazena o próximo diálogo a ser iniciado após o atual
+    private DialogoDados dialogoEmFila;
+    private bool jogoPausado = false;
+    private bool estavaAtivoAntesDoPause = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         indexListaDialogos = 0;
-        // Mantém a caixa fechada até ser solicitada por clique/evento
         if (caixaDialogo != null)
         {
             caixaDialogo.SetActive(false);
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    // Método para o Vitor chamar ao abrir/fechar o menu de Pause
+    public void DefinirPausaDialogo(bool pausado)
     {
-        
+        jogoPausado = pausado;
+
+        if (caixaDialogo == null) return;
+
+        if (pausado)
+        {
+            // Guarda se a caixa estava aberta e oculta para não sobrepor o menu de pause
+            estavaAtivoAntesDoPause = caixaDialogo.activeSelf;
+            if (estavaAtivoAntesDoPause)
+            {
+                caixaDialogo.SetActive(false);
+            }
+        }
+        else
+        {
+            // Restaura a caixa exatamente onde estava ao despausar
+            if (estavaAtivoAntesDoPause)
+            {
+                caixaDialogo.SetActive(true);
+                estavaAtivoAntesDoPause = false;
+            }
+        }
     }
 
     public void AvancarParaProximaFala()
     {
+        if (jogoPausado) return;
+
         indexListaDialogos++;
 
-        // Verifica se ainda há falas restantes no diálogo
         if (dialogoAtual != null && indexListaDialogos >= dialogoAtual.linhasDialogo.Count)
         {
-            // O diálogo acabou!
             FecharCaixaDialogo();
         }
         else
         {
-            // Existem falas, exibir a próxima fala
             ExibirFalaAtual();
         }
     }
@@ -53,9 +73,19 @@ public class GerenciadorDialogo : MonoBehaviour
     public void IniciarDialogo(DialogoDados novoDialogo)
     {
         if (novoDialogo == null) return;
+
         dialogoAtual = novoDialogo;
         indexListaDialogos = 0;
-        caixaDialogo.SetActive(true); // Liga a caixa apenas UMA vez no início!
+
+        if (jogoPausado)
+        {
+            // Se um diálogo disparar exatamente no frame do pause, marca para abrir ao despausar
+            estavaAtivoAntesDoPause = true;
+            ExibirFalaAtual();
+            return;
+        }
+
+        caixaDialogo.SetActive(true);
         ExibirFalaAtual();
     }
 
@@ -67,11 +97,9 @@ public class GerenciadorDialogo : MonoBehaviour
 
     public void EnfileirarDialogo(DialogoDados proximoDialogo)
     {
-        // Apenas coloca na fila!
         dialogoEmFila = proximoDialogo;
 
-        // Se ao final deste frame a caixa continuar fechada (caso um EPI não tenha fala), abre direto
-        if (caixaDialogo != null && !caixaDialogo.activeSelf)
+        if (caixaDialogo != null && !caixaDialogo.activeSelf && !estavaAtivoAntesDoPause)
         {
             Invoke(nameof(DispararFilaSeCaixaFechada), 0.05f);
         }
@@ -79,6 +107,8 @@ public class GerenciadorDialogo : MonoBehaviour
 
     private void DispararFilaSeCaixaFechada()
     {
+        if (jogoPausado) return;
+
         if (dialogoEmFila != null && caixaDialogo != null && !caixaDialogo.activeSelf)
         {
             DialogoDados proximo = dialogoEmFila;
@@ -90,12 +120,11 @@ public class GerenciadorDialogo : MonoBehaviour
     private void ExibirFalaAtual()
     {
         if (dialogoAtual == null || dialogoAtual.linhasDialogo.Count == 0) return;
-        // Obtém a fala atual com base no índice
+
         DialogoLinhas falaAtual = dialogoAtual.linhasDialogo[indexListaDialogos];
-        // Atualiza os campos da UI com as informações da fala atual
         campoNome.text = "Sérgio";
         campoTexto.text = falaAtual.falaPersonagem;
-        // Trata a imagem do avatar (só ativa se houver um sprite configurado)
+
         if (imagemAvatar != null)
         {
             if (falaAtual.spritePersonagem != null)
@@ -112,19 +141,15 @@ public class GerenciadorDialogo : MonoBehaviour
 
     private void FecharCaixaDialogo()
     {
-        // Se houver um diálogo na fila, inicia ele direto sem fechar a caixa
         if (dialogoEmFila != null)
         {
             DialogoDados proximo = dialogoEmFila;
-            dialogoEmFila = null; // Limpa a fila para encerrar normalmente depois
+            dialogoEmFila = null;
             IniciarDialogo(proximo);
             return;
         }
 
-        // Desativa a caixa de diálogo
         caixaDialogo.SetActive(false);
-
-        // Reinicia o índice para o início do diálogo
         indexListaDialogos = 0;
     }
 }

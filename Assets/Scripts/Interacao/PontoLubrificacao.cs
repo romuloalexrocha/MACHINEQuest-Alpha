@@ -49,12 +49,12 @@ public class PontoLubrificacao : MonoBehaviour, IClicavel
         }
 
         if(ci == null) return;
-        else if (ci.TemItem("Oleo_ISO_VG_220"))
+        else if (ci.EstaComItemEquipado("Oleo_ISO_VG_220"))
         {
             ga.TocarSomAcerto();
             miniGame.gameObject.SetActive(true);
         }
-        else if (ci.TemItem("Oleo_Hidraulico") || ci.TemItem("Graxa_Litio"))
+        else if (ci.EstaComItemEquipado("Oleo_Hidraulico") || ci.EstaComItemEquipado("Graxa_Litio"))
         {
             ga.TocarSomErro();
             gd.IniciarDialogo(dialogoErroLubrificante);

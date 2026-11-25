@@ -11,13 +11,38 @@ public class GerenciadorAudio : MonoBehaviour
     [SerializeField] private AudioClip somAcerto;
     [SerializeField] private AudioClip somErro;
 
+    private bool jogoPausado = false;
+
+    private void Start()
+    {
+        // Garante que o volume salvo nas opções seja aplicado ao carregar a UI
+        AudioListener.volume = PlayerPrefs.GetFloat("VolumeGeral", 1f);
+    }
+
     private void Update()
     {
-        // Detecta o clique esquerdo usando o New Input System
+        // Bloqueia detecção de cliques na cena enquanto o jogo estiver pausado
+        if (jogoPausado) return;
+
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             VerificarCliqueEmObjeto2D();
         }
+    }
+
+    // Método para o Vitor chamar ao abrir/fechar o menu de Pause
+    public void DefinirPausaAudio(bool pausado)
+    {
+        jogoPausado = pausado;
+        AudioListener.pause = pausado;
+    }
+
+    // Método opcional caso o menu de Pause também tenha controle de volume
+    public void DefinirVolumeGeral(float novoVolume)
+    {
+        AudioListener.volume = Mathf.Clamp01(novoVolume);
+        PlayerPrefs.SetFloat("VolumeGeral", AudioListener.volume);
+        PlayerPrefs.Save();
     }
 
     private void VerificarCliqueEmObjeto2D()
@@ -27,10 +52,8 @@ public class GerenciadorAudio : MonoBehaviour
         Vector2 posicaoMouse = Mouse.current.position.ReadValue();
         Vector2 posicaoMundo = Camera.main.ScreenToWorldPoint(posicaoMouse);
 
-        // Dispara o raio 2D exatamente como nos outros scripts
         RaycastHit2D hit = Physics2D.Raycast(posicaoMundo, Vector2.zero);
 
-        // Se acertou qualquer objeto clicável (Collider2D ativo) na cena, toca o som!
         if (hit.collider != null)
         {
             TocarSomClique();
@@ -53,7 +76,7 @@ public class GerenciadorAudio : MonoBehaviour
         }
     }
 
-    internal void TocarSomErro()
+    public void TocarSomErro()
     {
         if (fonteSFX != null && somErro != null)
         {
