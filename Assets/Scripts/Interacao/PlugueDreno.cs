@@ -11,8 +11,6 @@ public class PlugueDreno : MonoBehaviour, IClicavel
     [SerializeField] private DialogoDados dialogoSemBandeja;  // Aviso: "Coloque a bandeja antes de abrir!"
     [SerializeField] private DialogoDados dialogoDrenouOleo;  // Sucesso: "Óleo drenado com sucesso!"
     [SerializeField] private DialogoDados dialogoCarcassa;      // Para o diálogo da desmontagem da carcaça
-
-    private Camera cameraPrincipal;
     public bool drenoAberto = false;                         // Controle se o dreno já foi aberto
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,8 +25,6 @@ public class PlugueDreno : MonoBehaviour, IClicavel
 
         if (srPlugue == null)
             srPlugue = GetComponent<SpriteRenderer>();
-
-        cameraPrincipal = Camera.main;
     }
 
     public void AoClicar()
