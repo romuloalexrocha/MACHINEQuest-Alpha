@@ -5,33 +5,33 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject PainelOpcoes;
-    [SerializeField] private GerenciadorAudio audio;
-    [SerializeField] private GerenciadorDialogo dialogo;
+    [SerializeField] private GerenciadorAudio gAudio;
+    [SerializeField] private GerenciadorDialogo gDialogo;
 
     public void AbrirOpcoes()
     {
         PainelOpcoes.SetActive(true);
-        if (audio != null) audio.DefinirPausaAudio(true);
-        if (dialogo != null) dialogo.DefinirPausaDialogo(true);
+        if (gAudio != null) gAudio.DefinirPausaAudio(true);
+        if (gDialogo != null) gDialogo.DefinirPausaDialogo(true);
     }
 
     public void FecharOpcoes()
     {
         PainelOpcoes.SetActive(false);
-        if (audio != null) audio.DefinirPausaAudio(false);
-        if (dialogo != null) dialogo.DefinirPausaDialogo(false);
+        if (gAudio != null) gAudio.DefinirPausaAudio(false);
+        if (gDialogo != null) gDialogo.DefinirPausaDialogo(false);
     }
 
     public void VoltarMenu()
     {
-        if (audio != null) audio.DefinirPausaAudio(false);
-        if (dialogo != null) dialogo.DefinirPausaDialogo(false);
+        if (gAudio != null) gAudio.DefinirPausaAudio(false);
+        if (gDialogo != null) gDialogo.DefinirPausaDialogo(false);
         SceneManager.LoadScene("Scene_Menu");
     }
 
     private void Start()
     {
-        GerenciadorAudio audio = FindFirstObjectByType<GerenciadorAudio>(FindObjectsInactive.Include);
-        GerenciadorDialogo dialogo = FindFirstObjectByType<GerenciadorDialogo>(FindObjectsInactive.Include);
+        gAudio = FindFirstObjectByType<GerenciadorAudio>(FindObjectsInactive.Include);
+        gDialogo = FindFirstObjectByType<GerenciadorDialogo>(FindObjectsInactive.Include);
     }
 }
