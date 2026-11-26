@@ -4,8 +4,9 @@ public class PlugueDreno : MonoBehaviour, IClicavel
 {
     [Header("Referências da Cena")]
     [SerializeField] private PontoBandeja pontoBandeja;       // Para checar se a bandeja está no lugar
-    [SerializeField] private GerenciadorDialogo gd;          // Para disparar as falas do Sérgio
+    [SerializeField] private GerenciadorDialogo gd;           // Para disparar as falas do Sérgio
     [SerializeField] private SpriteRenderer srPlugue;         // Para esconder o plugue ao tirar
+    [SerializeField] private ControladorVistasRedutor cvr;    // Para bloquear a Visão Traseira
 
     [Header("Diálogos de Referência")]
     [SerializeField] private DialogoDados dialogoSemBandeja;  // Aviso: "Coloque a bandeja antes de abrir!"
@@ -54,6 +55,7 @@ public class PlugueDreno : MonoBehaviour, IClicavel
             if (gd != null && dialogoDrenouOleo != null && dialogoCarcassa != null)
             {
                 gd.IniciarDialogoEmSequencia(dialogoDrenouOleo, dialogoCarcassa);
+                cvr.DefinirEstadoVista("Traseira", false);
             }
 
             // Desativa o colisor do PlugueDreno para evitar cliques repetidos

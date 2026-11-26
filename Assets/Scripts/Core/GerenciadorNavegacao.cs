@@ -20,10 +20,11 @@ public class GerenciadorNavegacao : MonoBehaviour
     [SerializeField] private int etapaDesparafusarCarcaca = 4;
     [SerializeField] private DialogoDados dialogoOrientacaoVistaParafusos;
 
-    [Header("Botões Travados Antes dos EPIs")]
+    [Header("Botões e Vistas Travados Antes dos EPIs")]
     [SerializeField] private Button botaoCima;
     [SerializeField] private Button botaoDireita;
     [SerializeField] private Button botaoVoltar;
+    [SerializeField] private ControladorVistasRedutor cvr;
 
     [Header("Controle das Setas de Giro do Redutor")]
     [SerializeField] private BotoesGiroUI botoesGiroUI;
@@ -35,6 +36,11 @@ public class GerenciadorNavegacao : MonoBehaviour
 
     void Start()
     {
+        if(cvr == null)
+        {
+            cvr = FindFirstObjectByType<ControladorVistasRedutor>(FindObjectsInactive.Include);
+        }
+
         if (cameraPrincipal == null && Camera.main != null)
         {
             cameraPrincipal = Camera.main.transform;
@@ -75,6 +81,7 @@ public class GerenciadorNavegacao : MonoBehaviour
         if (etapaAtual == etapaPosicionarBandeja && !jaOrientouVistaBandeja && dialogoOrientacaoVistaBandeja != null)
         {
             jaOrientouVistaBandeja = true;
+            cvr.DefinirEstadoVista("Traseira", true);
             gerenciadorDialogo.IniciarDialogo(dialogoOrientacaoVistaBandeja);
         }
         else if (etapaAtual == etapaDesparafusarCarcaca && !jaOrientouVistaParafusos && dialogoOrientacaoVistaParafusos != null)

@@ -6,6 +6,7 @@ public class VistaRedutor
     public string nomeVista;            // Ex: "Lateral", "Traseira", "Superior"
     public Sprite spriteRedutor;        // Sprite do ângulo (pode repetir o atual enquanto não há arte)
     public GameObject grupoInteracoes;  // Objeto pai com as peças/colisores visíveis nesse ângulo
+    public bool habilitada = true;      // Desmarque no Inspector para vistas que começam bloqueadas (ex: Superior)
 }
 
 public class ControladorVistasRedutor : MonoBehaviour
@@ -23,6 +24,13 @@ public class ControladorVistasRedutor : MonoBehaviour
             spriteRendererRedutor = GetComponent<SpriteRenderer>();
         }
 
+        // Garante que o jogo não comece em uma vista desabilitada
+        if (vistas != null && vistas.Length > 0 && !vistas[indiceAtual].habilitada)
+        {
+            GirarDireita();
+            return;
+        }
+
         AtualizarVista();
     }
 
@@ -31,8 +39,15 @@ public class ControladorVistasRedutor : MonoBehaviour
     {
         if (vistas == null || vistas.Length == 0) return;
 
-        indiceAtual = (indiceAtual + 1) % vistas.Length;
-        AtualizarVista();
+        for (int tentativa = 0; tentativa < vistas.Length; tentativa++)
+        {
+            indiceAtual = (indiceAtual + 1) % vistas.Length;
+            if (vistas[indiceAtual].habilitada)
+            {
+                AtualizarVista();
+                return;
+            }
+        }
     }
 
     // Conecte este método no OnClick() do Botão Seta Esquerda
@@ -40,12 +55,40 @@ public class ControladorVistasRedutor : MonoBehaviour
     {
         if (vistas == null || vistas.Length == 0) return;
 
-        indiceAtual--;
-        if (indiceAtual < 0)
+        for (int tentativa = 0; tentativa < vistas.Length; tentativa++)
         {
-            indiceAtual = vistas.Length - 1;
+            indiceAtual--;
+            if (indiceAtual < 0)
+            {
+                indiceAtual = vistas.Length - 1;
+            }
+
+            if (vistas[indiceAtual].habilitada)
+            {
+                AtualizarVista();
+                return;
+            }
         }
-        AtualizarVista();
+    }
+
+    public void DefinirEstadoVista(string nomeAlvo, bool habilitar)
+    {
+        if (vistas == null) return;
+
+        for (int i = 0; i < vistas.Length; i++)
+        {
+            if (vistas[i].nomeVista.Equals(nomeAlvo, System.StringComparison.OrdinalIgnoreCase))
+            {
+                vistas[i].habilitada = habilitar;
+
+                // Se estamos desabilitando a vista que o jogador está olhando agora, gira automaticamente para uma válida
+                if (!habilitar && indiceAtual == i)
+                {
+                    GirarDireita();
+                }
+                return;
+            }
+        }
     }
 
     public string ObterNomeVistaAtual()
@@ -70,7 +113,5 @@ public class ControladorVistasRedutor : MonoBehaviour
                 vistas[i].grupoInteracoes.SetActive(ehVistaAtiva);
             }
         }
-
-        Debug.Log("Vista atual do Redutor: " + vistas[indiceAtual].nomeVista);
     }
 }
