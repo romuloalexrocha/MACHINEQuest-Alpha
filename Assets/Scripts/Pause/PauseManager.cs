@@ -24,6 +24,8 @@ public class PauseManager : MonoBehaviour
 
     public void VoltarMenu()
     {
+        if (audio != null) audio.DefinirPausaAudio(false);
+        if (dialogo != null) dialogo.DefinirPausaDialogo(false);
         SceneManager.LoadScene("Scene_Menu");
     }
 
