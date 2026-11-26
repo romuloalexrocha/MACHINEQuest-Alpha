@@ -11,6 +11,13 @@ public class GerenciadorAudio : MonoBehaviour
     [SerializeField] private AudioClip somAcerto;
     [SerializeField] private AudioClip somErro;
 
+    [Header("Audios EPIs")]
+    [SerializeField]  private AudioClip somOculos;
+    [SerializeField]  private AudioClip somAvental;
+    [SerializeField]  private AudioClip somCalcados;
+    [SerializeField]  private AudioClip somLuvas;
+    [SerializeField] private AudioClip somProtetor;
+
     private bool jogoPausado = false;
 
     private void Start()
@@ -81,6 +88,34 @@ public class GerenciadorAudio : MonoBehaviour
         if (fonteSFX != null && somErro != null)
         {
             fonteSFX.PlayOneShot(somErro);
+        }
+    }
+
+    public void TocarSomEPI(string nomeEPI)
+    {
+        if (nomeEPI == "Óculos")
+        {
+            fonteSFX.PlayOneShot(somOculos);
+        }
+        else if (nomeEPI == "Avental")
+        {
+            fonteSFX.PlayOneShot(somAvental);
+        }
+        else if (nomeEPI == "Calçados de Segurança")
+        {
+            fonteSFX.PlayOneShot(somCalcados);
+        }
+        else if (nomeEPI == "Luvas Químicas")
+        {
+            fonteSFX.PlayOneShot(somLuvas);
+        }
+        else if (nomeEPI == "Protetor Auricular")
+        {
+            fonteSFX.PlayOneShot(somProtetor);
+        }
+        else
+        {
+            Debug.Log("EPI nao cadastrado nos audios");
         }
     }
 }

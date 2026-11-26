@@ -14,6 +14,9 @@ public class GerenciadorEPI : MonoBehaviour
     [SerializeField] private GerenciadorDialogo gd;
     [SerializeField] private DialogoDados dialogoBandeja;
 
+    [Header("Som EPIs")]
+    [SerializeField] private GerenciadorAudio gAudio; 
+
     private const int TOTAL_EPIS = 5; // Ajuste para a quantidade exata de EPIs da cena
     private int episColetados = 0;
 
@@ -26,6 +29,7 @@ public class GerenciadorEPI : MonoBehaviour
             slotsEPIs[episColetados].enabled = true;
         }
 
+        gAudio.TocarSomEPI(nomeEPI);
         episColetados++;
         Debug.Log($"EPI coletado: {nomeEPI} ({episColetados}/{TOTAL_EPIS})");
 

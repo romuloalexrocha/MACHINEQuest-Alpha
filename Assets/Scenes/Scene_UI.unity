@@ -3052,8 +3052,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseManager
   PainelOpcoes: {fileID: 384499259}
-  audio: {fileID: 1161388445}
-  dialogo: {fileID: 1670704776}
+  gAudio: {fileID: 0}
+  gDialogo: {fileID: 0}
 --- !u!1 &682702775
 GameObject:
   m_ObjectHideFlags: 0
@@ -5633,6 +5633,11 @@ MonoBehaviour:
   somClique: {fileID: 8300000, guid: 2e0f41ad3549d9546bfa200e1396cf03, type: 3}
   somAcerto: {fileID: 8300000, guid: d45dffc4686741047bb8057a73db7cff, type: 3}
   somErro: {fileID: 8300000, guid: 290b60a855572664b9f4a24c9c2fbc02, type: 3}
+  somOculos: {fileID: 8300000, guid: e9e7299fe81dfbe46ab2f6ade3954571, type: 3}
+  somAvental: {fileID: 8300000, guid: 8737d84bec6f33141ad72bf5080a9023, type: 3}
+  somCalcados: {fileID: 8300000, guid: 01e09cdd681d11c4a9a62a0bcf8e1339, type: 3}
+  somLuvas: {fileID: 8300000, guid: 76f5affe27e4a4944bb9f845f36a0cb3, type: 3}
+  somProtetor: {fileID: 8300000, guid: 7949caac948ea4141a4a224a272ba924, type: 3}
 --- !u!82 &1161388446
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8249,6 +8254,7 @@ MonoBehaviour:
   gn: {fileID: 1670704780}
   gd: {fileID: 1670704776}
   dialogoBandeja: {fileID: 11400000, guid: c144e869a3ef55a4b93e77873b210895, type: 2}
+  gAudio: {fileID: 1161388445}
 --- !u!114 &1670704780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8275,6 +8281,7 @@ MonoBehaviour:
   botaoCima: {fileID: 1442574186}
   botaoDireita: {fileID: 1304280337}
   botaoVoltar: {fileID: 930994829}
+  cvr: {fileID: 0}
   botoesGiroUI: {fileID: 1748001503}
   cameraPrincipal: {fileID: 0}
 --- !u!114 &1670704781
