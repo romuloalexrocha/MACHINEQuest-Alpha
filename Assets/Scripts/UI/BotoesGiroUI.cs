@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BotoesGiroUI : MonoBehaviour
 {
@@ -7,11 +8,13 @@ public class BotoesGiroUI : MonoBehaviour
     [SerializeField] private Button botaoGirarEsquerda;
     [SerializeField] private Button botaoGirarDireita;
 
+    [Header("Indicador de Visão na Tela")]
+    [SerializeField] private TextMeshProUGUI textoVisaoAtual;
+
     private ControladorVistasRedutor controladorRedutor;
 
     private void Start()
     {
-        // Encontra o controlador do Redutor na Scene_Gameplay
         controladorRedutor = FindFirstObjectByType<ControladorVistasRedutor>(FindObjectsInactive.Include);
 
         if (botaoGirarEsquerda != null)
@@ -23,6 +26,21 @@ public class BotoesGiroUI : MonoBehaviour
         {
             botaoGirarDireita.onClick.AddListener(ClicarDireita);
         }
+
+        AtualizarTextoVisao();
+        DefinirVisibilidadeSetas(true);
+    }
+
+    public void DefinirVisibilidadeSetas(bool visivel)
+    {
+        if (botaoGirarEsquerda != null)
+            botaoGirarEsquerda.gameObject.SetActive(visivel);
+
+        if (botaoGirarDireita != null)
+            botaoGirarDireita.gameObject.SetActive(visivel);
+
+        if (textoVisaoAtual != null)
+            textoVisaoAtual.gameObject.SetActive(visivel);
     }
 
     private void ClicarEsquerda()
@@ -31,7 +49,10 @@ public class BotoesGiroUI : MonoBehaviour
             controladorRedutor = FindFirstObjectByType<ControladorVistasRedutor>(FindObjectsInactive.Include);
 
         if (controladorRedutor != null)
+        {
             controladorRedutor.GirarEsquerda();
+            AtualizarTextoVisao();
+        }
     }
 
     private void ClicarDireita()
@@ -40,6 +61,26 @@ public class BotoesGiroUI : MonoBehaviour
             controladorRedutor = FindFirstObjectByType<ControladorVistasRedutor>(FindObjectsInactive.Include);
 
         if (controladorRedutor != null)
+        {
             controladorRedutor.GirarDireita();
+            AtualizarTextoVisao();
+        }
+    }
+
+    private void AtualizarTextoVisao()
+    {
+        if (textoVisaoAtual == null) return;
+
+        if (controladorRedutor == null)
+            controladorRedutor = FindFirstObjectByType<ControladorVistasRedutor>(FindObjectsInactive.Include);
+
+        if (controladorRedutor != null)
+        {
+            string nomeVista = controladorRedutor.ObterNomeVistaAtual();
+            if (!string.IsNullOrEmpty(nomeVista))
+            {
+                textoVisaoAtual.text = "Visão " + nomeVista.ToUpper();
+            }
+        }
     }
 }
