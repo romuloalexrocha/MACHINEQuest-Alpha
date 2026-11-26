@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   etapa: 4
   linhasDialogo:
-  - falaPersonagem: "Agora, com a chave em m\xE3os, aproxime do redutor e retire
-      os parafusos da carca\xE7a."
+  - falaPersonagem: "Agora, com a chave em m\xE3os, troque para a vis\xE3o LATERAL,
+      aproxime do Redutor e retire os parafusos da carca\xE7a."
     spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
