@@ -34,7 +34,7 @@ public class GerenciadorDialogo : MonoBehaviour
 
         if (caixaDialogo == null) return;
 
-        if (pausado)
+        if (jogoPausado == true)
         {
             // Guarda se a caixa estava aberta e oculta para não sobrepor o menu de pause
             estavaAtivoAntesDoPause = caixaDialogo.activeSelf;

@@ -3155,6 +3155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseManager
   PainelOpcoes: {fileID: 384499259}
+  audio: {fileID: 1161388445}
+  dialogo: {fileID: 1670704776}
 --- !u!1 &682702775
 GameObject:
   m_ObjectHideFlags: 0
