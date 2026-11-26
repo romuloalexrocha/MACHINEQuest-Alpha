@@ -48,6 +48,12 @@ public class ControladorVistasRedutor : MonoBehaviour
         AtualizarVista();
     }
 
+    public string ObterNomeVistaAtual()
+    {
+        if (vistas == null || vistas.Length == 0) return "";
+        return vistas[indiceAtual].nomeVista;
+    }
+
     private void AtualizarVista()
     {
         for (int i = 0; i < vistas.Length; i++)

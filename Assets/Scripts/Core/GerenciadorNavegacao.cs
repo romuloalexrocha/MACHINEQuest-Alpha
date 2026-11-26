@@ -14,12 +14,24 @@ public class GerenciadorNavegacao : MonoBehaviour
     [SerializeField] private GerenciadorDialogo gerenciadorDialogo;
     [SerializeField] private DialogoDados dialogoFaltamEPIs;
 
+    [Header("Diálogos Orientativos de Vista do Redutor")]
+    [SerializeField] private int etapaPosicionarBandeja = 3;
+    [SerializeField] private DialogoDados dialogoOrientacaoVistaBandeja;
+    [SerializeField] private int etapaDesparafusarCarcaca = 4;
+    [SerializeField] private DialogoDados dialogoOrientacaoVistaParafusos;
+
     [Header("Botões Travados Antes dos EPIs")]
     [SerializeField] private Button botaoCima;
     [SerializeField] private Button botaoDireita;
     [SerializeField] private Button botaoVoltar;
 
+    [Header("Controle das Setas de Giro do Redutor")]
+    [SerializeField] private BotoesGiroUI botoesGiroUI;
+
     public Transform cameraPrincipal;
+
+    private bool jaOrientouVistaBandeja = false;
+    private bool jaOrientouVistaParafusos = false;
 
     void Start()
     {
@@ -28,22 +40,48 @@ public class GerenciadorNavegacao : MonoBehaviour
             cameraPrincipal = Camera.main.transform;
         }
 
+        if (botoesGiroUI == null)
+        {
+            botoesGiroUI = FindFirstObjectByType<BotoesGiroUI>(FindObjectsInactive.Include);
+        }
+
         TravarNavegacaoInicial();
+
+        // Começa na visão principal, então as setas ficam visíveis
+        if (botoesGiroUI != null) botoesGiroUI.DefinirVisibilidadeSetas(true);
     }
 
     public void IrParaBancadaPrincipal()
     {
-        // Bloqueia o retorno caso ainda não tenha coletado os 5 EPIs
         if (gerenciadorEPI != null && !gerenciadorEPI.TodosEPIsColetados())
         {
             if (gerenciadorDialogo != null && dialogoFaltamEPIs != null)
             {
                 gerenciadorDialogo.IniciarDialogo(dialogoFaltamEPIs);
             }
-            return; // Interrompe aqui e não move a câmera!
+            return;
         }
 
         MoverCamera(visaoBancadaPrincipal);
+        VerificarDialogoOrientativoRedutor();
+    }
+
+    private void VerificarDialogoOrientativoRedutor()
+    {
+        if (gerenciadorDialogo == null) return;
+
+        int etapaAtual = gerenciadorDialogo.RetornarValorDeEtapa();
+
+        if (etapaAtual == etapaPosicionarBandeja && !jaOrientouVistaBandeja && dialogoOrientacaoVistaBandeja != null)
+        {
+            jaOrientouVistaBandeja = true;
+            gerenciadorDialogo.IniciarDialogo(dialogoOrientacaoVistaBandeja);
+        }
+        else if (etapaAtual == etapaDesparafusarCarcaca && !jaOrientouVistaParafusos && dialogoOrientacaoVistaParafusos != null)
+        {
+            jaOrientouVistaParafusos = true;
+            gerenciadorDialogo.IniciarDialogo(dialogoOrientacaoVistaParafusos);
+        }
     }
 
     public void IrParaMesaEPI()
@@ -65,7 +103,6 @@ public class GerenciadorNavegacao : MonoBehaviour
     {
         if (destino != null)
         {
-            // Pega a Câmera principal da Gameplay caso a referência não esteja manual
             if (cameraPrincipal == null && Camera.main != null)
             {
                 cameraPrincipal = Camera.main.transform;
@@ -73,8 +110,14 @@ public class GerenciadorNavegacao : MonoBehaviour
 
             if (cameraPrincipal != null)
             {
-                // Move X e Y para o destino, mas TRAVA o Z em -10
                 cameraPrincipal.position = new Vector3(destino.position.x, destino.position.y, -10f);
+            }
+
+            // Mostra as setas de giro APENAS se estiver na bancada principal do Redutor
+            if (botoesGiroUI != null)
+            {
+                bool estaNaBancadaPrincipal = (destino == visaoBancadaPrincipal);
+                botoesGiroUI.DefinirVisibilidadeSetas(estaNaBancadaPrincipal);
             }
         }
     }
