@@ -43,7 +43,14 @@ public class ControleCarcassa : MonoBehaviour, IClicavel
 
         ga.TocarSomAcerto(); // Toca o som de sucesso
         gd.IniciarDialogo(dialogoCarcassaFechada); // Inicia o diálogo de sucesso
+<<<<<<< Updated upstream:Assets/Scripts/Inventario/ControleCarcassa.cs
 
+=======
+        cvr.DefinirEstadoVista("Superior", false);
+
+        BotoeiraTeste botoeira = FindFirstObjectByType<BotoeiraTeste>(FindObjectsInactive.Include);
+        if (botoeira != null) botoeira.LiberarBotoeira();
+>>>>>>> Stashed changes:Assets/Scripts/Interacao/ControleCarcassa.cs
     }
 
     private void BuscarReferencias()
