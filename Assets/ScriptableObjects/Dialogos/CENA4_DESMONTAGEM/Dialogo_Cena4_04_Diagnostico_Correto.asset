@@ -18,7 +18,3 @@ MonoBehaviour:
       isso que est\xE1 causando o travamento e o ru\xEDdo. Agora j\xE1 sabemos exatamente
       qual pe\xE7a precisa ser substitu\xEDda."
     spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}
-  - falaPersonagem: "CLIQUE na engrenagem quebrada para retir\xE1-la, depois v\xE1
-      para a MESA de INSUMOS e procure uma engrenagem nova com o mesmo di\xE2metro
-      e n\xFAmero de dentes."
-    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}
