@@ -47,6 +47,10 @@ public class ControleCarcassa : MonoBehaviour, IClicavel
         ga.TocarSomAcerto(); // Toca o som de sucesso
         gd.IniciarDialogo(dialogoCarcassaFechada); // Inicia o diálogo de sucesso
         cvr.DefinirEstadoVista("Superior", false);
+
+        BotoeiraTeste botoeira = FindFirstObjectByType<BotoeiraTeste>(FindObjectsInactive.Include);
+        if (botoeira != null) botoeira.LiberarBotoeira();
+>>>>>>> feat-romulo-polimento-semana4:Assets/Scripts/Interacao/ControleCarcassa.cs
     }
 
     private void BuscarReferencias()
