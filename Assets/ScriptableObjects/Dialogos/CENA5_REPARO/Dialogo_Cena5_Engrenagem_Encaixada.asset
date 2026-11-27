@@ -17,4 +17,4 @@ MonoBehaviour:
   - falaPersonagem: "Perfeito! Com a pe\xE7a trocada e antes de fechar a carca\xE7a,
       precisamos repor o lubrificante correto. Selecione o \xF3leo ISO VG 220 na
       mesa de equipamentos \xE0 DIREITA."
-    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: bf8b3ae70c7ca7045b87140700bbb0f7, type: 3}

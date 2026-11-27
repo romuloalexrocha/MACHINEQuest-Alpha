@@ -17,4 +17,4 @@ MonoBehaviour:
   - falaPersonagem: "\xD3timo! Agora preparados, vamos come\xE7ar. Primeiro, voc\xEA
       deve escorrer o \xF3leo de dentro do redutor. Clique em MESA INSUMOS para ir
       at\xE9 a mesa de insumos e pegar uma bandeja para despejar o \xF3leo."
-    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: bf8b3ae70c7ca7045b87140700bbb0f7, type: 3}

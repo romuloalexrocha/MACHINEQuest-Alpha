@@ -16,4 +16,4 @@ MonoBehaviour:
   linhasDialogo:
   - falaPersonagem: "O eixo est\xE1 pronto para receber a pe\xE7a nova, mas voc\xEA
       ainda n\xE3o pegou ou n\xE3o equipou nenhuma engrenagem."
-    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: c57bf43218e482a459a133201d8bd284, type: 3}

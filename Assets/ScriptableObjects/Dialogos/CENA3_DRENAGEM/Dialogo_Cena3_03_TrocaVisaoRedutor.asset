@@ -17,4 +17,4 @@ MonoBehaviour:
   - falaPersonagem: "Troque para a Vis\xE3o TRASEIRA do Redutor usando os bot\xF5es
       '<' ou '>' localizados acima dele e procure o espa\xE7o amarelo onde a bandeja
       deve ser posicionada."
-    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: c57bf43218e482a459a133201d8bd284, type: 3}

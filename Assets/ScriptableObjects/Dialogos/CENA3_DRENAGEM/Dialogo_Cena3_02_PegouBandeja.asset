@@ -17,8 +17,8 @@ MonoBehaviour:
   - falaPersonagem: "\xD3timo! A Bandeja foi para o seu invent\xE1rio. Para peg\xE1-la,
       clique no \xEDcone de INVENT\xC1RIO no canto superior da tela e clique novamente
       na Bandeja para equip\xE1-la. "
-    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: bf8b3ae70c7ca7045b87140700bbb0f7, type: 3}
   - falaPersonagem: "Depois disso, voc\xEA pode clicar no espa\xE7o delimitado para
       devolv\xEA-la novamente \xE0 mesa, ou clicar em MESA DO REDUTOR para voltar
       \xE0 mesa do redutor e posicion\xE1-la no local adequado. "
-    spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: bf8b3ae70c7ca7045b87140700bbb0f7, type: 3}

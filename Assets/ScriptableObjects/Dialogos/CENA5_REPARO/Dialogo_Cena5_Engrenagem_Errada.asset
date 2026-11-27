@@ -17,4 +17,4 @@ MonoBehaviour:
   - falaPersonagem: "Essa engrenagem n\xE3o encaixa aqui - o n\xFAmero de dentes
       \xE9 incompat\xEDvel com a rela\xE7\xE3o deste eixo. Devolva essa pe\xE7a na
       mesa \xE0 DIREITA e traga a engrenagem correta."
-    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: c57bf43218e482a459a133201d8bd284, type: 3}

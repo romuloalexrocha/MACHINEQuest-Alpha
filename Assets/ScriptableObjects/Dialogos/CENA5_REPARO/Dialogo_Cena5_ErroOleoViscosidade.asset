@@ -17,4 +17,4 @@ MonoBehaviour:
   - falaPersonagem: "Esse n\xE3o \xE9 o \xF3leo correto. Usar um \xF3leo com a viscosidade
       errada pode causar sobreaquecimento e desgastar as pe\xE7as rapidamente. Procure
       pelo \xD3leo ISO VG 220"
-    spritePersonagem: {fileID: 21300000, guid: 19c21000310d60b42900e4e6b1623c15, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: a5e8a11e1d621664da1f4d1c7e045ab2, type: 3}

@@ -16,4 +16,4 @@ MonoBehaviour:
   linhasDialogo:
   - falaPersonagem: "Essa engrenagem est\xE1 \xEDntegra, sem sinais de desgaste cr\xEDtico
       ou fratura. Continue procurando pela pe\xE7a danificada..."
-    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: c57bf43218e482a459a133201d8bd284, type: 3}

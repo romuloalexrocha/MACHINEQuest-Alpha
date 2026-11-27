@@ -16,4 +16,4 @@ MonoBehaviour:
   linhasDialogo:
   - falaPersonagem: "N\xE3o \xE9 desse item que precisamos, precisamos de uma bandeja
       para conter o \xF3leo."
-    spritePersonagem: {fileID: 21300000, guid: 19c21000310d60b42900e4e6b1623c15, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: a5e8a11e1d621664da1f4d1c7e045ab2, type: 3}

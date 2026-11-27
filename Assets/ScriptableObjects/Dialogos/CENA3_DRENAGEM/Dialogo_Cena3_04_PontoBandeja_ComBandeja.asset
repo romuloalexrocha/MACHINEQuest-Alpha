@@ -16,8 +16,8 @@ MonoBehaviour:
   linhasDialogo:
   - falaPersonagem: "Bandeja posicionada corretamente! Agora podemos drenar o \xF3leo
       do Redutor com seguran\xE7a."
-    spritePersonagem: {fileID: 21300000, guid: 9f2620029748e734988f0ce7535f4695, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: c57bf43218e482a459a133201d8bd284, type: 3}
   - falaPersonagem: "Est\xE1 vendo o buj\xE3o de dreno na Vis\xE3o Traseira? CLIQUE
       nele para destravar o plugue e espere o \xF3leo escorrer totalmente para a
       bandeja."
-    spritePersonagem: {fileID: 21300000, guid: f282ac153a1507d4b9663de7d7b7d1a3, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: c57bf43218e482a459a133201d8bd284, type: 3}

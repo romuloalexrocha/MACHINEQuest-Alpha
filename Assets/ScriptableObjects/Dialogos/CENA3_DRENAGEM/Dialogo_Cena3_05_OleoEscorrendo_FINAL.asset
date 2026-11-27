@@ -16,4 +16,4 @@ MonoBehaviour:
   linhasDialogo:
   - falaPersonagem: "O \xF3leo come\xE7ou a escorrer, muito bem! Aguarde at\xE9 o
       final."
-    spritePersonagem: {fileID: 21300000, guid: 8eee92ddd8b6c5146800cd847b8539f5, type: 3}
+    spritePersonagem: {fileID: 21300000, guid: 38c2ba6a9e0c8e748a115ec2e797f634, type: 3}
