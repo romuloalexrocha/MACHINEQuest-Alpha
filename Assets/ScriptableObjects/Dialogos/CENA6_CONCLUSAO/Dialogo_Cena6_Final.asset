@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoDados
   etapa: 6
   linhasDialogo:
-  - falaPersonagem: "Muito bem, conseguimos! Excelente trabalho, novato! \U0001F603\U0001F44D"
+  - falaPersonagem: "Muito bem, conseguimos! Excelente trabalho, novato! Ordem de
+      Servi\xE7o conclu\xEDda!"
     spritePersonagem: {fileID: 21300000, guid: 09c019f739c0f484791094f773cff9d6, type: 3}

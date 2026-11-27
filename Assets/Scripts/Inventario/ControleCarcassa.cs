@@ -42,11 +42,18 @@ public class ControleCarcassa : MonoBehaviour, IClicavel
         // Lógica para fechar a carcassa
         carcassaAberta = false;
         prontoParaFechar = false;
-        if(colisorCarcassa != null) colisorCarcassa.enabled = false; // Desativa o colisor para evitar múltiplos cliques)
+        if (colisorCarcassa != null) colisorCarcassa.enabled = false;
 
-        ga.TocarSomAcerto(); // Toca o som de sucesso
-        gd.IniciarDialogo(dialogoCarcassaFechada); // Inicia o diálogo de sucesso
+        ga.TocarSomAcerto();
+        gd.IniciarDialogo(dialogoCarcassaFechada);
         cvr.DefinirEstadoVista("Superior", false);
+
+        // Libera a botoeira de teste operacional na bancada
+        BotoeiraTeste botoeira = FindFirstObjectByType<BotoeiraTeste>(FindObjectsInactive.Include);
+        if (botoeira != null)
+        {
+            botoeira.LiberarBotoeira();
+        }
     }
 
     private void BuscarReferencias()

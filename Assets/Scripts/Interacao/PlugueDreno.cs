@@ -26,6 +26,9 @@ public class PlugueDreno : MonoBehaviour, IClicavel
 
         if (srPlugue == null)
             srPlugue = GetComponent<SpriteRenderer>();
+
+        if (cvr == null)
+            cvr = FindAnyObjectByType<ControladorVistasRedutor>(FindObjectsInactive.Include);
     }
 
     public void AoClicar()
